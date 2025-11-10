@@ -1,4 +1,4 @@
-import type { ESLint, Linter } from 'eslint';
+import type { ESLint } from 'eslint';
 import noBootstrapGrid from './rules/no-bootstrap-grid';
 import noBootstrapUtilities from './rules/no-bootstrap-utilities';
 import recommended from './configs/recommended';
@@ -6,19 +6,10 @@ import strict from './configs/strict';
 import recommendedLegacy from './configs/recommended-legacy';
 import strictLegacy from './configs/strict-legacy';
 
-interface Plugin extends ESLint.Plugin {
-  configs: {
-    recommended: any;
-    strict: any;
-    'recommended-legacy': any;
-    'strict-legacy': any;
-  };
-}
-
-const plugin: Plugin = {
+const plugin: ESLint.Plugin = {
   meta: {
     name: 'eslint-plugin-you-dont-need-bootstrap',
-    version: '0.1.1',
+    version: '0.3.0',
   },
   rules: {
     'no-bootstrap-grid': noBootstrapGrid,
@@ -26,8 +17,8 @@ const plugin: Plugin = {
   },
   configs: {
     // Flat config (ESLint >= 9.0.0)
-    recommended,
-    strict,
+    recommended: recommended,
+    strict: strict,
     // Legacy config (.eslintrc format)
     'recommended-legacy': recommendedLegacy,
     'strict-legacy': strictLegacy,
@@ -36,8 +27,3 @@ const plugin: Plugin = {
 
 // Export as default for flat config
 export default plugin;
-
-// Also export individual properties for legacy config compatibility
-export const rules = plugin.rules;
-export const configs = plugin.configs;
-export const meta = plugin.meta;

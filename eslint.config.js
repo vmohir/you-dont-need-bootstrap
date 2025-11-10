@@ -1,4 +1,4 @@
-import youDontNeedBootstrap from './packages/eslint-plugin/src/index.js';
+import youDontNeedBootstrap from './packages/eslint-plugin/dist/index.mjs';
 
 export default [
   {

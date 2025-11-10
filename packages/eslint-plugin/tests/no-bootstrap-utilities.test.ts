@@ -1,6 +1,8 @@
 import { RuleTester } from 'eslint';
 import { describe, it } from 'vitest';
-import rule from '../src/rules/no-bootstrap-utilities.js';
+import noBootstrapUtilities from '../src/rules/no-bootstrap-utilities';
+
+const rule = noBootstrapUtilities;
 
 const ruleTester = new RuleTester({
   languageOptions: {
@@ -19,10 +21,10 @@ describe('no-bootstrap-utilities', () => {
     ruleTester.run('no-bootstrap-utilities', rule, {
       valid: [
         {
-          code: '<div className="custom-class">Content</div>',
+          code: '<div class="custom-class">Content</div>',
         },
         {
-          code: '<div className="flex items-center">Content</div>',
+          code: '<div class="flex items-center">Content</div>',
         },
         {
           code: '<div>No classes</div>',
@@ -31,7 +33,7 @@ describe('no-bootstrap-utilities', () => {
       invalid: [
         // Spacing utilities
         {
-          code: '<div className="mt-3">Content</div>',
+          code: '<div class="mt-3">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -39,7 +41,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="p-4">Content</div>',
+          code: '<div class="p-4">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -47,7 +49,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="mx-auto">Content</div>',
+          code: '<div class="mx-auto">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -56,7 +58,7 @@ describe('no-bootstrap-utilities', () => {
         },
         // Display utilities
         {
-          code: '<div className="d-flex">Content</div>',
+          code: '<div class="d-flex">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -64,7 +66,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="d-none d-md-block">Content</div>',
+          code: '<div class="d-none d-md-block">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -73,7 +75,7 @@ describe('no-bootstrap-utilities', () => {
         },
         // Flexbox utilities
         {
-          code: '<div className="justify-content-center">Content</div>',
+          code: '<div class="justify-content-center">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -81,7 +83,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="align-items-center">Content</div>',
+          code: '<div class="align-items-center">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -89,7 +91,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="flex-column">Content</div>',
+          code: '<div class="flex-column">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -98,7 +100,7 @@ describe('no-bootstrap-utilities', () => {
         },
         // Color utilities
         {
-          code: '<div className="text-primary">Content</div>',
+          code: '<div class="text-primary">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -106,7 +108,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="bg-danger">Content</div>',
+          code: '<div class="bg-danger">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -115,7 +117,7 @@ describe('no-bootstrap-utilities', () => {
         },
         // Typography utilities
         {
-          code: '<div className="text-center">Content</div>',
+          code: '<div class="text-center">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -123,7 +125,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="fw-bold">Content</div>',
+          code: '<div class="fw-bold">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapUtilities',
@@ -132,11 +134,11 @@ describe('no-bootstrap-utilities', () => {
         },
         // Multiple utilities
         {
-          code: '<div className="d-flex justify-content-center align-items-center">Content</div>',
+          code: '<div class="d-flex justify-content-center align-items-center">Content</div>',
           errors: [{ messageId: 'noBootstrapUtilities' }, { messageId: 'noBootstrapUtilities' }],
         },
         {
-          code: '<div className="mt-3 mb-4 text-center">Content</div>',
+          code: '<div class="mt-3 mb-4 text-center">Content</div>',
           errors: [{ messageId: 'noBootstrapUtilities' }, { messageId: 'noBootstrapUtilities' }],
         },
       ],
@@ -147,17 +149,17 @@ describe('no-bootstrap-utilities', () => {
     ruleTester.run('no-bootstrap-utilities with spacing only', rule, {
       valid: [
         {
-          code: '<div className="d-flex">Content</div>',
+          code: '<div class="d-flex">Content</div>',
           options: [{ categories: ['spacing'] }],
         },
         {
-          code: '<div className="text-center">Content</div>',
+          code: '<div class="text-center">Content</div>',
           options: [{ categories: ['spacing'] }],
         },
       ],
       invalid: [
         {
-          code: '<div className="mt-3">Content</div>',
+          code: '<div class="mt-3">Content</div>',
           options: [{ categories: ['spacing'] }],
           errors: [
             {
@@ -166,7 +168,7 @@ describe('no-bootstrap-utilities', () => {
           ],
         },
         {
-          code: '<div className="p-4">Content</div>',
+          code: '<div class="p-4">Content</div>',
           options: [{ categories: ['spacing'] }],
           errors: [
             {

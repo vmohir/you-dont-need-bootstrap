@@ -1,6 +1,8 @@
 import { RuleTester } from 'eslint';
 import { describe, it } from 'vitest';
-import rule from '../src/rules/no-bootstrap-grid.js';
+import noBootstrapGrid from '../src/rules/no-bootstrap-grid';
+
+const rule = noBootstrapGrid;
 
 const ruleTester = new RuleTester({
   languageOptions: {
@@ -19,13 +21,13 @@ describe('no-bootstrap-grid', () => {
     ruleTester.run('no-bootstrap-grid', rule, {
       valid: [
         {
-          code: '<div className="grid">Content</div>',
+          code: '<div class="grid">Content</div>',
         },
         {
-          code: '<div className="flex">Content</div>',
+          code: '<div class="flex">Content</div>',
         },
         {
-          code: '<div className="my-custom-class">Content</div>',
+          code: '<div class="my-custom-class">Content</div>',
         },
         {
           code: '<div>No classes</div>',
@@ -33,7 +35,7 @@ describe('no-bootstrap-grid', () => {
       ],
       invalid: [
         {
-          code: '<div className="container">Content</div>',
+          code: '<div class="container">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapGrid',
@@ -41,7 +43,7 @@ describe('no-bootstrap-grid', () => {
           ],
         },
         {
-          code: '<div className="row">Content</div>',
+          code: '<div class="row">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapGrid',
@@ -49,7 +51,7 @@ describe('no-bootstrap-grid', () => {
           ],
         },
         {
-          code: '<div className="col-md-6">Content</div>',
+          code: '<div class="col-md-6">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapGrid',
@@ -57,11 +59,11 @@ describe('no-bootstrap-grid', () => {
           ],
         },
         {
-          code: '<div className="row"><div className="col-6">Content</div></div>',
+          code: '<div class="row"><div class="col-6">Content</div></div>',
           errors: [{ messageId: 'noBootstrapGrid' }, { messageId: 'noBootstrapGrid' }],
         },
         {
-          code: '<div className="container-fluid">Content</div>',
+          code: '<div class="container-fluid">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapGrid',
@@ -69,7 +71,7 @@ describe('no-bootstrap-grid', () => {
           ],
         },
         {
-          code: '<div className="col-lg-4 col-md-6">Content</div>',
+          code: '<div class="col-lg-4 col-md-6">Content</div>',
           errors: [
             {
               messageId: 'noBootstrapGrid',

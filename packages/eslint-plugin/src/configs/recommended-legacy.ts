@@ -1,9 +1,11 @@
+import { Linter } from 'eslint';
+
 /**
  * Recommended configuration for eslint-plugin-you-dont-need-bootstrap
  * Legacy format for .eslintrc
  * Warns about Bootstrap usage without blocking development
  */
-export default {
+const config: Linter.LegacyConfig = {
   plugins: ['you-dont-need-bootstrap'],
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
@@ -15,3 +17,5 @@ export default {
     ],
   },
 };
+
+export default config;

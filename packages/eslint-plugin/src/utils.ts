@@ -1,3 +1,5 @@
+import type { Node as ESTreeNode } from 'estree';
+
 /**
  * Extract class names from a string (handles template literals and string concatenation)
  */
@@ -14,20 +16,22 @@ export function extractClassNames(value: unknown): string[] {
 /**
  * Get the class attribute value from a JSX attribute or HTML attribute
  */
-export function getClassValue(node: any): string | null {
+export function getClassValue(node: ESTreeNode): string | null {
   // JSX: className="..."
-  if (node.type === 'JSXAttribute' && node.value) {
-    if (node.value.type === 'Literal') {
+  if (node.type === 'JSXAttribute' && 'value' in node && node.value) {
+    if (node.value.type === 'Literal' && typeof node.value.value === 'string') {
       return node.value.value;
     }
     // Handle JSXExpressionContainer for template literals or expressions
-    if (node.value.type === 'JSXExpressionContainer') {
+    if (node.value.type === 'JSXExpressionContainer' && 'expression' in node.value) {
       const expr = node.value.expression;
-      if (expr.type === 'Literal' || expr.type === 'StringLiteral') {
-        return expr.value;
-      }
-      if (expr.type === 'TemplateLiteral' && expr.quasis.length === 1) {
-        return expr.quasis[0].value.cooked;
+      if ('type' in expr) {
+        if ((expr.type === 'Literal' || expr.type === 'StringLiteral') && 'value' in expr && typeof expr.value === 'string') {
+          return expr.value;
+        }
+        if (expr.type === 'TemplateLiteral' && 'quasis' in expr && Array.isArray(expr.quasis) && expr.quasis.length === 1) {
+          return expr.quasis[0]?.value.cooked ?? null;
+        }
       }
     }
   }
