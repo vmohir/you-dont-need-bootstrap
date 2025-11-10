@@ -115,12 +115,13 @@ export const MessageEditor = props => {
         <div className="row">
           <div className="col-md-6 offset-md-3">
             <div className="ml-auto">
-              <div className="card-body">
+              <div className="card-body h-100 w-100">
                 <h2 className="text-center fw-bold text-primary mb-3">Bootstrap Card</h2>
                 <p className="text-muted">This uses Bootstrap classes that could be replaced.</p>
                 <div className="d-flex justify-content-between align-items-center mt-4">
                   <button className="btn btn-primary">Action</button>
                   <span className="text-secondary">Info</span>
+                  <span {...{ className: isFetching ? 'pb-0' : 'pb-4' }}>test</span>
                 </div>
               </div>
             </div>

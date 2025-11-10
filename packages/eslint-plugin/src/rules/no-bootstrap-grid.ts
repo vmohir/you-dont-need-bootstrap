@@ -51,53 +51,38 @@ const rule: Rule.RuleModule = {
   },
 
   create(context): Rule.RuleListener {
+    const checkClassAttribute = (node: Node): void => {
+      const classValue = getClassValue(node);
+      if (!classValue) return;
+
+      const classNames = extractClassNames(classValue);
+      const { matched } = matchPatterns(classNames, GRID_PATTERNS);
+
+      if (matched.length > 0) {
+        context.report({
+          node,
+          messageId: 'noBootstrapGrid',
+          data: {
+            message: createMessage(matched, 'grid', SUGGESTION),
+          },
+        });
+      }
+    };
+
     return {
       // Handle JSX className attribute
       JSXAttribute(node: Node) {
-        if (node.type !== 'JSXAttribute') return;
         if (
+          node.type === 'JSXAttribute' &&
           node.name.type === 'JSXIdentifier' &&
-          node.name.name !== 'className' &&
-          node.name.name !== 'class'
+          (node.name.name === 'className' || node.name.name === 'class')
         ) {
-          return;
-        }
-
-        const classValue = getClassValue(node);
-        if (!classValue) return;
-
-        const classNames = extractClassNames(classValue);
-        const { matched } = matchPatterns(classNames, GRID_PATTERNS);
-
-        if (matched.length > 0) {
-          context.report({
-            node,
-            messageId: 'noBootstrapGrid',
-            data: {
-              message: createMessage(matched, 'grid', SUGGESTION),
-            },
-          });
+          checkClassAttribute(node);
         }
       },
 
-      // Handle HTML class attribute (for .html or template files if configured)
-      Attribute(node: Node) {
-        const classValue = getClassValue(node);
-        if (!classValue) return;
-
-        const classNames = extractClassNames(classValue);
-        const { matched } = matchPatterns(classNames, GRID_PATTERNS);
-
-        if (matched.length > 0) {
-          context.report({
-            node,
-            messageId: 'noBootstrapGrid',
-            data: {
-              message: createMessage(matched, 'grid', SUGGESTION),
-            },
-          });
-        }
-      },
+      // Handle HTML class attribute
+      Attribute: checkClassAttribute,
     };
   },
 };

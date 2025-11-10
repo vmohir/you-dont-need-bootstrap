@@ -44,19 +44,13 @@ export function matchPatterns(
   classNames: string[],
   patterns: RegExp[]
 ): { matched: string[]; patterns: RegExp[] } {
-  const matched: string[] = [];
-  const matchedPatterns: RegExp[] = [];
+  const matched = classNames.filter(className =>
+    patterns.some(pattern => pattern.test(className))
+  );
 
-  for (const className of classNames) {
-    for (const pattern of patterns) {
-      if (pattern.test(className)) {
-        matched.push(className);
-        if (!matchedPatterns.includes(pattern)) {
-          matchedPatterns.push(pattern);
-        }
-      }
-    }
-  }
+  const matchedPatterns = patterns.filter(pattern =>
+    classNames.some(className => pattern.test(className))
+  );
 
   return { matched, patterns: matchedPatterns };
 }
@@ -64,7 +58,7 @@ export function matchPatterns(
 /**
  * Create a message about detected Bootstrap classes
  */
-export function createMessage(classes: string[], category: string, suggestion: string): string {
+export function createMessage(classes: string[], category: string): string {
   const classesStr = classes.map(c => `'${c}'`).join(', ');
-  return `Avoid Bootstrap ${category} classes (${classesStr}). ${suggestion}`;
+  return `Avoid Bootstrap ${category} classes (${classesStr})`;
 }
