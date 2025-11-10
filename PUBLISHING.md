@@ -29,15 +29,7 @@ npm whoami
 
 This should display your npm username.
 
-### 3. Check if package name is available
-
-```bash
-npm view eslint-plugin-you-dont-need-bootstrap
-```
-
-If you see "404 Not Found", the name is available!
-
-### 4. Do a dry-run (already done!)
+### 3. Do a dry-run (already done!)
 
 ```bash
 cd packages/eslint-plugin
@@ -46,29 +38,14 @@ npm pack --dry-run
 
 This shows what will be included in the package.
 
-### 5. Publish the package
+### 4. Publish the package
 
 ```bash
 cd packages/eslint-plugin
-npm publish --access public
+npm publish
 ```
 
 **Note:** Use `--access public` because this is a scoped or new package.
-
-### 6. Verify publication
-
-```bash
-npm view eslint-plugin-you-dont-need-bootstrap
-```
-
-You should see your package details!
-
-### 7. Test installation
-
-```bash
-# In a different directory
-npm install eslint-plugin-you-dont-need-bootstrap
-```
 
 ## Publishing Updates
 

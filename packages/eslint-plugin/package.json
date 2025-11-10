@@ -1,16 +1,21 @@
 {
   "name": "eslint-plugin-you-dont-need-bootstrap",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "ESLint plugin to detect Bootstrap usage and suggest modern CSS alternatives",
-  "main": "./src/index.cjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "import": "./src/index.mjs",
-      "require": "./src/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": false,
   "files": [
-    "src"
+    "dist"
   ],
   "keywords": [
     "eslint",
@@ -32,18 +37,19 @@
     "url": "https://github.com/vahidmohammadi/you-dont-need-bootstrap/issues"
   },
   "scripts": {
+    "build": "tsup",
     "test": "vitest",
-    "test:ci": "vitest run"
+    "test:ci": "vitest run",
+    "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
   },
   "devDependencies": {
+    "@types/eslint": "^9.6.1",
     "eslint": "^9.15.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.7.2",
     "vitest": "^2.1.8"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "private": false
+  }
 }

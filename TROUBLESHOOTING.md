@@ -43,6 +43,7 @@ If using VS Code or another IDE with ESLint integration:
 Make sure your `.eslintrc.js` or `.eslintrc.json` is correctly formatted:
 
 **.eslintrc.js:**
+
 ```js
 module.exports = {
   plugins: [
@@ -57,6 +58,7 @@ module.exports = {
 ```
 
 **.eslintrc.json:**
+
 ```json
 {
   "plugins": ["you-dont-need-bootstrap"],
@@ -123,6 +125,7 @@ node test-exports.js
 ```
 
 You should see:
+
 ```
 ✅ All exports are valid!
 ```
@@ -155,16 +158,19 @@ npm install
 ### Debug Steps:
 
 1. **Check plugin location:**
+
 ```bash
 find node_modules -name "eslint-plugin-you-dont-need-bootstrap"
 ```
 
 2. **Verify the plugin has rules:**
+
 ```bash
 cat node_modules/eslint-plugin-you-dont-need-bootstrap/package.json
 ```
 
 3. **Check ESLint can load the plugin:**
+
 ```bash
 npx eslint --debug 2>&1 | grep "you-dont-need-bootstrap"
 ```
@@ -172,6 +178,7 @@ npx eslint --debug 2>&1 | grep "you-dont-need-bootstrap"
 4. **Test with a minimal config:**
 
 Create a minimal `.eslintrc.test.js`:
+
 ```js
 module.exports = {
   plugins: ['you-dont-need-bootstrap'],
@@ -182,6 +189,7 @@ module.exports = {
 ```
 
 Then test:
+
 ```bash
 npx eslint --config .eslintrc.test.js yourfile.jsx
 ```
@@ -193,6 +201,7 @@ npx eslint --config .eslintrc.test.js yourfile.jsx
 **Cause:** Plugin not installed or not in node_modules
 
 **Fix:**
+
 ```bash
 pnpm add -D eslint-plugin-you-dont-need-bootstrap
 ```
@@ -202,6 +211,7 @@ pnpm add -D eslint-plugin-you-dont-need-bootstrap
 **Cause:** ESLint cache or editor cache
 
 **Fix:**
+
 ```bash
 npx eslint --clear-cache
 # Restart your editor
@@ -212,6 +222,7 @@ npx eslint --clear-cache
 **Cause:** Editor ESLint extension using different ESLint version or config
 
 **Fix:**
+
 - Check VS Code ESLint extension settings
 - Make sure editor is using the project's ESLint
 - Reload the editor window
@@ -221,6 +232,7 @@ npx eslint --clear-cache
 **Cause:** Using flat config (eslint.config.js) with legacy rule names
 
 **Fix:**
+
 - For flat config: Use `youDontNeedBootstrap.configs.recommended`
 - For .eslintrc: Use `plugin:you-dont-need-bootstrap/recommended-legacy`
 
