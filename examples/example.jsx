@@ -29,7 +29,7 @@ export function BootstrapCard() {
 // ✅ Modern CSS Version
 export function ModernCard() {
   return (
-    <div className="container">
+    <div>
       <div className="card-grid">
         <div className="card">
           <h2 className="card-title">Modern Card</h2>
@@ -107,3 +107,65 @@ Corresponding CSS:
   color: var(--color-text-muted);
 }
 */
+
+export const MessageEditor = props => {
+  return (
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <div className="ml-auto">
+              <div className="card-body">
+                <h2 className="text-center fw-bold text-primary mb-3">Bootstrap Card</h2>
+                <p className="text-muted">This uses Bootstrap classes that could be replaced.</p>
+                <div className="d-flex justify-content-between align-items-center mt-4">
+                  <button className="btn btn-primary">Action</button>
+                  <span className="text-secondary">Info</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <StyledMessageEditorContainer $hasVisualBox={!!props.showMultipleMessagesUi}>
+        {props.showMultipleMessagesUi && (
+          <StyledMessageEditorTitle>
+            <Ds.Text weight="bold">{props.editorTitle}</Ds.Text>
+            <Ds.Button
+              className="ml-auto"
+              appearance="secondary"
+              size="small"
+              onClick={props.onClickRemove}
+            >
+              Remove
+            </Ds.Button>
+          </StyledMessageEditorTitle>
+        )}
+        <Ds.Flex flexDirection="column" gap="1">
+          <ComposeTextArea onUserTyping={onUserTyping} />
+          <MessageComponentActionStack
+            assigneeLabel={
+              assigneeSelector ?? (
+                <Ds.Badge color="greyscale" data-testid="assignee-label">
+                  <strong>{assigneeLabel}</strong>
+                </Ds.Badge>
+              )
+            }
+          />
+        </Ds.Flex>
+        <StillLoadingErrors />
+        <ScheduledSendInfo />
+        {props.showMultipleMessagesUi && patient && (
+          <Ds.Flex
+            data-testid="message-actions-control-bar"
+            justifyContent="flex-start"
+            flexWrap={'wrap'}
+            gap={'1'}
+          >
+            <MessageActionsControlBar patientExternalIds={patient.externalIds} />
+          </Ds.Flex>
+        )}
+      </StyledMessageEditorContainer>
+    </>
+  );
+};

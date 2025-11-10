@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-you-dont-need-bootstrap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ESLint plugin to detect Bootstrap usage and suggest modern CSS alternatives",
   "main": "./src/index.cjs",
   "exports": {
