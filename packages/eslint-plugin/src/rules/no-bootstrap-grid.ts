@@ -49,7 +49,7 @@ const rule: Rule.RuleModule = {
     ],
   },
 
-  create(context) {
+  create(context): Rule.RuleListener {
     return {
       // Handle JSX className attribute
       JSXAttribute(node) {
