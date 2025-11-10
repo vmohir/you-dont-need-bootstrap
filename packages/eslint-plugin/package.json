@@ -48,6 +48,7 @@
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/estree": "^1.0.8",
+    "@types/estree-jsx": "^1.0.5",
     "eslint": "^9.15.0",
     "tsup": "^8.5.0",
     "typescript": "^5.7.2",

@@ -5,7 +5,7 @@ import { Linter } from 'eslint';
  * Treats Bootstrap usage as errors to enforce migration
  */
 const config: Linter.Config = {
-  plugins: ['you-dont-need-bootstrap'],
+  plugins: {},
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'error',
     'you-dont-need-bootstrap/no-bootstrap-utilities': [

@@ -5,7 +5,7 @@ import { Linter } from 'eslint';
  * Warns about Bootstrap usage without blocking development
  */
 const config: Linter.Config = {
-  plugins: ['you-dont-need-bootstrap'],
+  plugins: {},
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-utilities': [

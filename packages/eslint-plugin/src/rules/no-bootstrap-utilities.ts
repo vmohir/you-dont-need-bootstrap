@@ -1,4 +1,5 @@
 import type { Rule } from 'eslint';
+import type { Node } from 'estree-jsx';
 import { extractClassNames, getClassValue, matchPatterns, createMessage } from '../utils';
 
 // Bootstrap utility patterns organized by category
@@ -61,6 +62,7 @@ const UTILITY_CATEGORIES = {
   },
 };
 
+type UtilityCategories = keyof typeof UTILITY_CATEGORIES;
 const rule: Rule.RuleModule = {
   meta: {
     type: 'suggestion',
@@ -91,30 +93,26 @@ const rule: Rule.RuleModule = {
     ],
   },
 
-  create(context) {
-    const options = context.options[0] || {};
-    const enabledCategories = options.categories || [
-      'spacing',
-      'display',
-      'flexbox',
-      'colors',
-      'typography',
-    ];
+  create(context): Rule.RuleListener {
+    const options = (context.options[0] as { categories?: UtilityCategories[] }) || {};
+    const enabledCategories: UtilityCategories[] =
+      options.categories || (['spacing', 'display', 'flexbox', 'colors', 'typography'] as const);
 
     // Build patterns list based on enabled categories
-    const allPatterns = [];
-    const categoryMap = new Map();
+    const allPatterns: RegExp[] = [];
+    const categoryMap = new Map<RegExp, string>();
 
     for (const category of enabledCategories) {
-      if (UTILITY_CATEGORIES[category]) {
-        for (const pattern of UTILITY_CATEGORIES[category].patterns) {
-          allPatterns.push(pattern);
-          categoryMap.set(pattern, category);
-        }
+      if (!(category in UTILITY_CATEGORIES)) {
+        continue;
+      }
+      for (const pattern of UTILITY_CATEGORIES[category].patterns) {
+        allPatterns.push(pattern);
+        categoryMap.set(pattern, category);
       }
     }
 
-    function checkClassAttribute(node) {
+    function checkClassAttribute(node: Node): void {
       const classValue = getClassValue(node);
       if (!classValue) return;
 
@@ -123,47 +121,48 @@ const rule: Rule.RuleModule = {
 
       if (matched.length > 0) {
         // Group matches by category for better error messages
-        const matchesByCategory = {};
-        for (let i = 0; i < matched.length; i++) {
-          const className = matched[i];
+        const matchesByCategory: Record<string, string[]> = {};
+        for (const className of matched) {
+          if (!className) continue;
           const pattern = patterns.find(p => p.test(className));
-          if (pattern) {
-            const category = categoryMap.get(pattern);
-            if (!matchesByCategory[category]) {
-              matchesByCategory[category] = [];
-            }
-            matchesByCategory[category].push(className);
-          }
+          if (!pattern) continue;
+          const category = categoryMap.get(pattern);
+          if (!category) continue;
+          matchesByCategory[category] = [...(matchesByCategory[category] ?? []), className];
         }
 
         // Report each category separately
         for (const [category, classes] of Object.entries(matchesByCategory)) {
-          const categoryInfo = UTILITY_CATEGORIES[category];
-          context.report({
-            node,
-            messageId: 'noBootstrapUtilities',
-            data: {
-              message: createMessage(classes, category, categoryInfo.suggestion),
-            },
-          });
+          const categoryInfo = UTILITY_CATEGORIES[category as UtilityCategories];
+          if (categoryInfo && classes) {
+            context.report({
+              node,
+              messageId: 'noBootstrapUtilities',
+              data: {
+                message: createMessage(classes, category, categoryInfo.suggestion),
+              },
+            });
+          }
         }
       }
     }
 
     return {
       // Handle JSX className attribute
-      JSXAttribute(node) {
-        if (node.name.name !== 'className' && node.name.name !== 'class') {
+      JSXAttribute(node: Node) {
+        if (node.type !== 'JSXAttribute') return;
+        if (
+          node.name.type === 'JSXIdentifier' &&
+          node.name.name !== 'className' &&
+          node.name.name !== 'class'
+        ) {
           return;
         }
         checkClassAttribute(node);
       },
 
       // Handle HTML class attribute
-      Attribute(node) {
-        if (node.key?.name !== 'class' && node.key?.value !== 'class') {
-          return;
-        }
+      Attribute(node: Node) {
         checkClassAttribute(node);
       },
     };

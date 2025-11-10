@@ -1,4 +1,5 @@
 import type { Rule } from 'eslint';
+import type { Node } from 'estree-jsx';
 import { extractClassNames, getClassValue, matchPatterns, createMessage } from '../utils';
 
 // Bootstrap grid patterns
@@ -52,8 +53,13 @@ const rule: Rule.RuleModule = {
   create(context): Rule.RuleListener {
     return {
       // Handle JSX className attribute
-      JSXAttribute(node) {
-        if (node.name.name !== 'className' && node.name.name !== 'class') {
+      JSXAttribute(node: Node) {
+        if (node.type !== 'JSXAttribute') return;
+        if (
+          node.name.type === 'JSXIdentifier' &&
+          node.name.name !== 'className' &&
+          node.name.name !== 'class'
+        ) {
           return;
         }
 
@@ -75,11 +81,7 @@ const rule: Rule.RuleModule = {
       },
 
       // Handle HTML class attribute (for .html or template files if configured)
-      Attribute(node) {
-        if (node.key?.name !== 'class' && node.key?.value !== 'class') {
-          return;
-        }
-
+      Attribute(node: Node) {
         const classValue = getClassValue(node);
         if (!classValue) return;
 
