@@ -1,0 +1,20 @@
+{
+  "plugins": ["you-dont-need-bootstrap"],
+  "extends": ["plugin:you-dont-need-bootstrap/recommended-legacy"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
+    "you-dont-need-bootstrap/no-bootstrap-utilities": [
+      "warn",
+      {
+        "categories": ["spacing", "display", "flexbox", "colors", "typography"]
+      }
+    ]
+  }
+}

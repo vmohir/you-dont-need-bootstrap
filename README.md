@@ -850,7 +850,7 @@ pnpm add -D eslint-plugin-you-dont-need-bootstrap
 
 ### Configuration
 
-**ESLint Flat Config (eslint.config.js):**
+**ESLint Flat Config (eslint.config.js) - ESLint >= 9.0.0:**
 
 ```js
 import youDontNeedBootstrap from 'eslint-plugin-you-dont-need-bootstrap';
@@ -868,6 +868,19 @@ export default [
   // Or use the recommended preset
   youDontNeedBootstrap.configs.recommended,
 ];
+```
+
+**Legacy Config (.eslintrc.json or .eslintrc.js):**
+
+```json
+{
+  "plugins": ["you-dont-need-bootstrap"],
+  "extends": ["plugin:you-dont-need-bootstrap/recommended-legacy"],
+  "rules": {
+    "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
+    "you-dont-need-bootstrap/no-bootstrap-utilities": "warn"
+  }
+}
 ```
 
 ### Rules

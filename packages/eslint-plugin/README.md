@@ -16,7 +16,7 @@ yarn add -D eslint-plugin-you-dont-need-bootstrap
 
 ## Usage
 
-### ESLint Flat Config (Recommended)
+### ESLint Flat Config (ESLint >= 9.0.0)
 
 **eslint.config.js:**
 
@@ -40,9 +40,39 @@ export default [
 ];
 ```
 
+### Legacy Config (.eslintrc)
+
+**.eslintrc.json:**
+
+```json
+{
+  "plugins": ["you-dont-need-bootstrap"],
+  "extends": ["plugin:you-dont-need-bootstrap/recommended-legacy"],
+  "rules": {
+    "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
+    "you-dont-need-bootstrap/no-bootstrap-utilities": "warn"
+  }
+}
+```
+
+**.eslintrc.js:**
+
+```js
+module.exports = {
+  plugins: ['you-dont-need-bootstrap'],
+  extends: ['plugin:you-dont-need-bootstrap/recommended-legacy'],
+  rules: {
+    'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-utilities': 'warn',
+  },
+};
+```
+
 ## Presets
 
-### `recommended`
+### Flat Config Presets (ESLint >= 9.0.0)
+
+#### `recommended`
 
 Warns about Bootstrap usage without blocking development.
 
@@ -52,7 +82,7 @@ import youDontNeedBootstrap from 'eslint-plugin-you-dont-need-bootstrap';
 export default [youDontNeedBootstrap.configs.recommended];
 ```
 
-### `strict`
+#### `strict`
 
 Treats Bootstrap usage as errors to enforce migration.
 
@@ -60,6 +90,28 @@ Treats Bootstrap usage as errors to enforce migration.
 import youDontNeedBootstrap from 'eslint-plugin-you-dont-need-bootstrap';
 
 export default [youDontNeedBootstrap.configs.strict];
+```
+
+### Legacy Config Presets (.eslintrc)
+
+#### `recommended-legacy`
+
+Warns about Bootstrap usage without blocking development.
+
+```json
+{
+  "extends": ["plugin:you-dont-need-bootstrap/recommended-legacy"]
+}
+```
+
+#### `strict-legacy`
+
+Treats Bootstrap usage as errors to enforce migration.
+
+```json
+{
+  "extends": ["plugin:you-dont-need-bootstrap/strict-legacy"]
+}
 ```
 
 ## Rules
