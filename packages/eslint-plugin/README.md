@@ -21,7 +21,7 @@ yarn add -D eslint-plugin-you-dont-need-bootstrap
 **eslint.config.js:**
 
 ```js
-import youDontNeedBootstrap from 'eslint-plugin-you-dont-need-bootstrap';
+import youDontNeedBootstrap from "eslint-plugin-you-dont-need-bootstrap";
 
 export default [
   // Use the recommended preset
@@ -30,11 +30,11 @@ export default [
   // Or configure rules individually
   {
     plugins: {
-      'you-dont-need-bootstrap': youDontNeedBootstrap,
+      "you-dont-need-bootstrap": youDontNeedBootstrap,
     },
     rules: {
-      'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
-      'you-dont-need-bootstrap/no-bootstrap-utilities': 'warn',
+      "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
+      "you-dont-need-bootstrap/no-bootstrap-utilities": "warn",
     },
   },
 ];
@@ -59,11 +59,11 @@ export default [
 
 ```js
 module.exports = {
-  plugins: ['you-dont-need-bootstrap'],
-  extends: ['plugin:you-dont-need-bootstrap/recommended-legacy'],
+  plugins: ["you-dont-need-bootstrap"],
+  extends: ["plugin:you-dont-need-bootstrap/recommended-legacy"],
   rules: {
-    'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
-    'you-dont-need-bootstrap/no-bootstrap-utilities': 'warn',
+    "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
+    "you-dont-need-bootstrap/no-bootstrap-utilities": "warn",
   },
 };
 ```
@@ -77,7 +77,7 @@ module.exports = {
 Warns about Bootstrap usage without blocking development.
 
 ```js
-import youDontNeedBootstrap from 'eslint-plugin-you-dont-need-bootstrap';
+import youDontNeedBootstrap from "eslint-plugin-you-dont-need-bootstrap";
 
 export default [youDontNeedBootstrap.configs.recommended];
 ```
@@ -87,7 +87,7 @@ export default [youDontNeedBootstrap.configs.recommended];
 Treats Bootstrap usage as errors to enforce migration.
 
 ```js
-import youDontNeedBootstrap from 'eslint-plugin-you-dont-need-bootstrap';
+import youDontNeedBootstrap from "eslint-plugin-you-dont-need-bootstrap";
 
 export default [youDontNeedBootstrap.configs.strict];
 ```

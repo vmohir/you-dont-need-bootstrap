@@ -47,12 +47,12 @@ Make sure your `.eslintrc.js` or `.eslintrc.json` is correctly formatted:
 ```js
 module.exports = {
   plugins: [
-    'you-dont-need-bootstrap',
+    "you-dont-need-bootstrap",
     // ... other plugins
   ],
   rules: {
-    'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
-    'you-dont-need-bootstrap/no-bootstrap-utilities': 'warn',
+    "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
+    "you-dont-need-bootstrap/no-bootstrap-utilities": "warn",
   },
 };
 ```
@@ -181,9 +181,9 @@ Create a minimal `.eslintrc.test.js`:
 
 ```js
 module.exports = {
-  plugins: ['you-dont-need-bootstrap'],
+  plugins: ["you-dont-need-bootstrap"],
   rules: {
-    'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
+    "you-dont-need-bootstrap/no-bootstrap-grid": "warn",
   },
 };
 ```

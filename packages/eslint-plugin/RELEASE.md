@@ -28,6 +28,7 @@ Use these prefixes for your commits:
 - `ci:` - CI/CD changes (no release)
 
 For breaking changes, add `BREAKING CHANGE:` in the commit body or use `!` after the type:
+
 ```
 feat!: remove legacy config support
 
@@ -74,11 +75,13 @@ Make sure your GitHub repository has these settings:
 ### Step 4: Test the Setup
 
 1. Make a commit with a semantic message:
+
    ```bash
    git commit -m "feat: add new sizing utilities detection"
    ```
 
 2. Push to main:
+
    ```bash
    git push origin main
    ```
@@ -93,20 +96,24 @@ Make sure your GitHub repository has these settings:
 ## Troubleshooting
 
 ### "npm ERR! code ENEEDAUTH"
+
 - Your npm token is missing or incorrect
 - Regenerate the token and update the GitHub secret
 
 ### "npm ERR! 403 Forbidden"
+
 - Your npm account doesn't have publish permissions for this package
 - Make sure you're a maintainer of `eslint-plugin-you-dont-need-bootstrap`
 - Your granular token may not have **Read and write** permissions - regenerate with correct permissions
 
 ### "npm ERR! code EOTP" or 2FA errors
+
 - Granular access tokens should work in CI without 2FA
 - If you see 2FA prompts, your token configuration may be incorrect
 - Make sure you created a **Granular Access Token**, not a Classic Token
 
 ### Release doesn't trigger
+
 - Check commit message follows conventional commits format
 - Ensure you're pushing to the `main` branch
 - Check if `[skip ci]` is in the commit message
