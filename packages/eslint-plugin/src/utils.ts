@@ -15,23 +15,41 @@ export function extractClassNames(value: unknown): string[] {
 
 /**
  * Get the class attribute value from a JSX attribute or HTML attribute
+ * Returns an array of possible class values (for ternary expressions)
  */
 export function getClassValue(node: Node): string | null {
   // JSX: className="..."
-  if (node.type === 'JSXAttribute' && node.value) {
-    if (node.value.type === 'Literal' && typeof node.value.value === 'string') {
-      return node.value.value;
+  if (!(node.type === 'JSXAttribute' && node.value)) {
+    return null;
+  }
+  if (node.value.type === 'Literal' && typeof node.value.value === 'string') {
+    return node.value.value;
+  }
+  if (node.value.type !== 'JSXExpressionContainer') {
+    return null;
+  }
+
+  const expr = node.value.expression;
+
+  // Handle JSXExpressionContainer for template literals or expressions
+  if (expr.type === 'Literal' && typeof expr.value === 'string') {
+    return expr.value;
+  }
+  if (expr.type === 'TemplateLiteral' && expr.quasis.length === 1) {
+    return expr.quasis[0]?.value.cooked ?? null;
+  }
+
+  // Handle ternary expressions: className={condition ? 'class-a' : 'class-b'}
+  if (expr.type === 'ConditionalExpression') {
+    const values: string[] = [];
+    if (expr.consequent.type === 'Literal' && typeof expr.consequent.value === 'string') {
+      values.push(expr.consequent.value);
     }
-    // Handle JSXExpressionContainer for template literals or expressions
-    if (node.value.type === 'JSXExpressionContainer') {
-      const expr = node.value.expression;
-      if (expr.type === 'Literal' && typeof expr.value === 'string') {
-        return expr.value;
-      }
-      if (expr.type === 'TemplateLiteral' && expr.quasis.length === 1) {
-        return expr.quasis[0]?.value.cooked ?? null;
-      }
+    if (expr.alternate.type === 'Literal' && typeof expr.alternate.value === 'string') {
+      values.push(expr.alternate.value);
     }
+    // Return combined classes from both branches
+    return values.length > 0 ? values.join(' ') : null;
   }
 
   return null;

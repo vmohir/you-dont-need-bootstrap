@@ -122,6 +122,7 @@ export const MessageEditor = props => {
                   <button className="btn btn-primary">Action</button>
                   <span className="text-secondary">Info</span>
                   <span {...{ className: isFetching ? 'pb-0' : 'pb-4' }}>test</span>
+                  <span className={isFetching ? 'pb-0' : 'pb-4'}>test</span>
                 </div>
               </div>
             </div>
