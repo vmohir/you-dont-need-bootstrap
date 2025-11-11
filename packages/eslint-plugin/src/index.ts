@@ -33,3 +33,8 @@ plugin.configs!.strict = strict;
 
 // Export as default for flat config
 export default plugin;
+
+// Also export as named export and direct exports for CommonJS/legacy compatibility
+export const rules = plugin.rules;
+export const configs = plugin.configs;
+export const meta = plugin.meta;
