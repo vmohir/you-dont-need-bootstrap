@@ -9,9 +9,4 @@ export default defineConfig({
   sourcemap: true,
   outDir: 'dist',
   external: ['eslint'],
-  cjsInterop: true, // Enable proper CommonJS interop for legacy eslintrc
-  footer: {
-    // For legacy .eslintrc support, unwrap default export for CommonJS
-    js: 'if (typeof module !== "undefined" && module.exports && module.exports.default) { module.exports = module.exports.default; }',
-  },
 });
