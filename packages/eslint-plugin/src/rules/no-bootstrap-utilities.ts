@@ -2,22 +2,20 @@ import type { Rule } from 'eslint';
 import type { Node } from 'estree-jsx';
 import { extractClassNames, getClassValue, matchPatterns, createMessage } from '../utils';
 
-// Bootstrap utility patterns organized by category
+// Bootstrap utility patterns organized by category (optimized by merging similar patterns)
 const UTILITY_CATEGORIES = {
   spacing: {
     patterns: [
-      // Margin
-      /^[pm]-([0-5]|auto)$/,
-      /^[pm][trblse]-([0-5]|auto)$/,
-      // Negative margins
-      /^m-n[1-5]$/,
-      /^m[trblse]-n[1-5]$/,
+      // Padding: p-{0-5|auto}, p{direction}-{0-5|auto}
+      /^p([trblse])?-([0-5]|auto)$/,
+      // Margin: m-{0-5|auto|n1-5}, m{direction}-{0-5|auto|n1-5}
+      /^m([trblse])?-(n[1-5]|[0-5]|auto)$/,
     ],
   },
   display: {
     patterns: [
-      /^d-(none|inline|inline-block|block|grid|table|table-row|table-cell|flex|inline-flex)$/,
-      /^d-(sm|md|lg|xl|xxl)-(none|inline|inline-block|block|grid|table|table-row|table-cell|flex|inline-flex)$/,
+      // Display: d-{value}, d-{breakpoint}-{value}
+      /^d-((sm|md|lg|xl|xxl)-)?(none|inline|inline-block|block|grid|table|table-row|table-cell|flex|inline-flex)$/,
     ],
   },
   flexbox: {
@@ -52,10 +50,10 @@ const UTILITY_CATEGORIES = {
   },
   sizing: {
     patterns: [
-      /^[hw]-(25|50|75|100|auto)$/,
-      /^m[wh]-(25|50|75|100|auto)$/,
-      /^min-v[hw]-100$/,
-      /^v[hw]-100$/,
+      // Width/Height: w-{value}, h-{value}, mw-{value}, mh-{value}
+      /^m?[wh]-(25|50|75|100|auto)$/,
+      // Viewport: vw-100, vh-100, min-vw-100, min-vh-100
+      /^(min-)?v[wh]-100$/,
     ],
   },
 };
