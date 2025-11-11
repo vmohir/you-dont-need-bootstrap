@@ -1,4 +1,5 @@
 import type { Node } from 'estree-jsx';
+import { Rule } from 'eslint';
 
 /**
  * Extract class names from a string (handles template literals and string concatenation)
@@ -79,4 +80,65 @@ export function matchPatterns(
 export function createMessage(classes: string[], category: string): string {
   const classesStr = classes.map(c => `'${c}'`).join(', ');
   return `Avoid Bootstrap ${category} classes (${classesStr})`;
+}
+
+/**
+ * Factory function to create a Bootstrap detection rule
+ */
+export function createBootstrapComponentRule(config: {
+  name: string;
+  patterns: RegExp[];
+  url: string;
+}): Rule.RuleModule {
+  return {
+    meta: {
+      type: 'suggestion',
+      docs: {
+        description: `Disallow Bootstrap ${config.name} classes`,
+        category: 'Best Practices',
+        recommended: true,
+        url: config.url,
+      },
+      messages: {
+        noBootstrap: 'Avoid Bootstrap {{name}} classes "{{classes}}"',
+      },
+    },
+
+    create(context): Rule.RuleListener {
+      const checkClassAttribute = (node: Node): void => {
+        const classValue = getClassValue(node);
+        if (!classValue) return;
+
+        const classNames = extractClassNames(classValue);
+        const { matched } = matchPatterns(classNames, config.patterns);
+
+        if (matched.length > 0) {
+          context.report({
+            node,
+            messageId: `noBootstrap${config.name[0]?.toUpperCase() + config.name.slice(1)}`,
+            data: {
+              name: config.name,
+              classes: matched.join(', '),
+            },
+          });
+        }
+      };
+
+      return {
+        // Handle JSX className attribute
+        JSXAttribute(node: Node) {
+          if (
+            node.type === 'JSXAttribute' &&
+            node.name.type === 'JSXIdentifier' &&
+            (node.name.name === 'className' || node.name.name === 'class')
+          ) {
+            checkClassAttribute(node);
+          }
+        },
+
+        // Handle HTML class attribute
+        Attribute: checkClassAttribute,
+      };
+    },
+  };
 }
