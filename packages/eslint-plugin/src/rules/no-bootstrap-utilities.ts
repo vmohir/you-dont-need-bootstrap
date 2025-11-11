@@ -184,8 +184,8 @@ const rule: Rule.RuleModule = {
   },
 
   create(context): Rule.RuleListener {
-    const options = (context.options[0] as { categories?: UtilityCategories[] }) || {};
-    const enabledCategories: UtilityCategories[] = options.categories || ALL_CATEGORIES;
+    const options = (context.options[0] as { categories?: UtilityCategories[] } | undefined) ?? {};
+    const enabledCategories: UtilityCategories[] = options.categories ?? ALL_CATEGORIES;
 
     // Build patterns list based on enabled categories using flatMap
     const categoryMap = new Map<RegExp, string>();
@@ -221,16 +221,13 @@ const rule: Rule.RuleModule = {
 
       // Report each category separately
       Object.entries(matchesByCategory).forEach(([category, classes]) => {
-        const categoryInfo = UTILITY_CATEGORIES[category as UtilityCategories];
-        if (categoryInfo) {
-          context.report({
-            node,
-            messageId: 'noBootstrapUtilities',
-            data: {
-              message: createMessage(classes, category),
-            },
-          });
-        }
+        context.report({
+          node,
+          messageId: 'noBootstrapUtilities',
+          data: {
+            message: createMessage(classes, category),
+          },
+        });
       });
     };
 

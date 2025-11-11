@@ -49,8 +49,9 @@ const plugin: ESLint.Plugin = {
 recommended.plugins = { 'you-dont-need-bootstrap': plugin };
 strict.plugins = { 'you-dont-need-bootstrap': plugin };
 
-plugin.configs!.recommended = recommended;
-plugin.configs!.strict = strict;
+plugin.configs = plugin.configs || {};
+  plugin.configs.recommended = recommended;
+  plugin.configs.strict = strict;
 
 // Export as default for flat config
 export default plugin;

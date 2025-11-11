@@ -113,9 +113,11 @@ export function createBootstrapComponentRule(config: {
         const { matched } = matchPatterns(classNames, config.patterns);
 
         if (matched.length > 0) {
+          const capitalizedName =
+            config.name.charAt(0).toUpperCase() + config.name.slice(1);
           context.report({
             node,
-            messageId: `noBootstrap${config.name[0]?.toUpperCase() + config.name.slice(1)}`,
+            messageId: `noBootstrap${capitalizedName}`,
             data: {
               name: config.name,
               classes: matched.join(', '),
