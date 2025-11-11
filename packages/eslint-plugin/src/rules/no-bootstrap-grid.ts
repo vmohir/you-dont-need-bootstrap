@@ -20,9 +20,6 @@ const GRID_PATTERNS = [
   /^gy-[0-5]$/,
 ];
 
-const SUGGESTION =
-  'Use CSS Grid with `display: grid` and `grid-template-columns` instead. See: https://github.com/vahidmohammadi/you-dont-need-bootstrap#grid-system';
-
 const rule: Rule.RuleModule = {
   meta: {
     type: 'suggestion',
@@ -63,7 +60,7 @@ const rule: Rule.RuleModule = {
           node,
           messageId: 'noBootstrapGrid',
           data: {
-            message: createMessage(matched, 'grid', SUGGESTION),
+            message: createMessage(matched, 'grid'),
           },
         });
       }

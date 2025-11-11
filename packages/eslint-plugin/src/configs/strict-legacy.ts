@@ -9,12 +9,7 @@ const config: Linter.LegacyConfig = {
   plugins: ['you-dont-need-bootstrap'],
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'error',
-    'you-dont-need-bootstrap/no-bootstrap-utilities': [
-      'error',
-      {
-        categories: ['spacing', 'display', 'flexbox', 'colors', 'typography'],
-      },
-    ],
+    'you-dont-need-bootstrap/no-bootstrap-utilities': ['error'],
   },
 };
 

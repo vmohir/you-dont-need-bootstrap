@@ -11,9 +11,6 @@ const config: Linter.LegacyConfig = {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-utilities': [
       'warn',
-      {
-        categories: ['spacing', 'display', 'flexbox', 'colors', 'typography'],
-      },
     ],
   },
 };

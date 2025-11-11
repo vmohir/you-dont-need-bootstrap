@@ -8,12 +8,7 @@ const config: Linter.Config = {
   plugins: {},
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
-    'you-dont-need-bootstrap/no-bootstrap-utilities': [
-      'warn',
-      {
-        categories: ['spacing', 'display', 'flexbox', 'colors', 'typography'],
-      },
-    ],
+    'you-dont-need-bootstrap/no-bootstrap-utilities': ['warn'],
   },
 };
 

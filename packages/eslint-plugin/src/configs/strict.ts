@@ -10,9 +10,6 @@ const config: Linter.Config = {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'error',
     'you-dont-need-bootstrap/no-bootstrap-utilities': [
       'error',
-      {
-        categories: ['spacing', 'display', 'flexbox', 'colors', 'typography'],
-      },
     ],
   },
 };

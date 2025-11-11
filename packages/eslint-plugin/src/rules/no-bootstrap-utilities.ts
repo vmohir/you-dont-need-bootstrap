@@ -51,7 +51,8 @@ const UTILITY_CATEGORIES = {
     ],
   },
   sizing: {
-    patterns: [/^[hw]-(25|50|75|100|auto)$/,
+    patterns: [
+      /^[hw]-(25|50|75|100|auto)$/,
       /^m[wh]-(25|50|75|100|auto)$/,
       /^min-v[hw]-100$/,
       /^v[hw]-100$/,
@@ -60,6 +61,14 @@ const UTILITY_CATEGORIES = {
 };
 
 type UtilityCategories = keyof typeof UTILITY_CATEGORIES;
+export const ALL_CATEGORIES: UtilityCategories[] = [
+  'spacing',
+  'display',
+  'flexbox',
+  'colors',
+  'typography',
+  'sizing',
+];
 const rule: Rule.RuleModule = {
   meta: {
     type: 'suggestion',
@@ -80,9 +89,9 @@ const rule: Rule.RuleModule = {
             type: 'array',
             items: {
               type: 'string',
-              enum: ['spacing', 'display', 'flexbox', 'colors', 'typography'],
+              enum: ALL_CATEGORIES,
             },
-            default: ['spacing', 'display', 'flexbox', 'colors', 'typography'],
+            default: ALL_CATEGORIES,
           },
         },
         additionalProperties: false,
@@ -92,8 +101,7 @@ const rule: Rule.RuleModule = {
 
   create(context): Rule.RuleListener {
     const options = (context.options[0] as { categories?: UtilityCategories[] }) || {};
-    const enabledCategories: UtilityCategories[] =
-      options.categories || (['spacing', 'display', 'flexbox', 'colors', 'typography'] as const);
+    const enabledCategories: UtilityCategories[] = options.categories || ALL_CATEGORIES;
 
     // Build patterns list based on enabled categories using flatMap
     const categoryMap = new Map<RegExp, string>();
