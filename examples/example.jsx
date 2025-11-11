@@ -4,6 +4,9 @@
  *   npx eslint examples/example.jsx
  */
 
+import { Button, Alert, Form, FormGroup, Label, Input } from 'reactstrap';
+import React from 'react';
+
 // ❌ Bootstrap Version
 export function BootstrapCard() {
   return (
@@ -169,5 +172,21 @@ export const MessageEditor = props => {
         )}
       </StyledMessageEditorContainer>
     </>
+  );
+};
+
+export const ComponentWithReactstrapComponents = () => {
+  return (
+    <div>
+      <Button color="primary">Click Me</Button>
+      <Alert color="warning">This is a warning alert!</Alert>
+      <Form>
+        <FormGroup>
+          <Label for="exampleEmail">Email</Label>
+          <Input type="email" name="email" id="exampleEmail" placeholder="Enter your email" />
+        </FormGroup>
+        <Button color="success">Submit</Button>
+      </Form>
+    </div>
   );
 };

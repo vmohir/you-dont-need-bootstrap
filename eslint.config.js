@@ -1,4 +1,5 @@
 import youDontNeedBootstrap from './packages/eslint-plugin/dist/index.mjs';
+import recommended from './packages/eslint-plugin/src/configs/recommended.ts';
 
 export default [
   {
@@ -22,14 +23,7 @@ export default [
         __filename: 'readonly',
       },
     },
-    rules: {
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'no-console': 'off',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'object-shorthand': 'error',
-      'prefer-arrow-callback': 'error',
-    },
+    rules: {},
   },
   // Demo the you-dont-need-bootstrap plugin on examples
   {
@@ -38,8 +32,7 @@ export default [
       'you-dont-need-bootstrap': youDontNeedBootstrap,
     },
     rules: {
-      'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
-      'you-dont-need-bootstrap/no-bootstrap-utilities': 'warn',
+      ...youDontNeedBootstrap.configs.recommended.rules,
     },
   },
 ];

@@ -9,6 +9,7 @@ const config: Linter.Config = {
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-utilities': ['warn'],
+    'you-dont-need-bootstrap/no-reactstrap-components': 'warn',
   },
 };
 

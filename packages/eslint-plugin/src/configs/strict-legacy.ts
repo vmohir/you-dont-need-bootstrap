@@ -10,6 +10,7 @@ const config: Linter.LegacyConfig = {
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'error',
     'you-dont-need-bootstrap/no-bootstrap-utilities': ['error'],
+    'you-dont-need-bootstrap/no-reactstrap-components': 'error',
   },
 };
 

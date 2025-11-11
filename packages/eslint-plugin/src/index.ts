@@ -1,6 +1,7 @@
 import type { ESLint } from 'eslint';
 import noBootstrapGrid from './rules/no-bootstrap-grid';
 import noBootstrapUtilities from './rules/no-bootstrap-utilities';
+import noReactstrapComponents from './rules/no-reactstrap-components';
 import recommended from './configs/recommended';
 import strict from './configs/strict';
 import recommendedLegacy from './configs/recommended-legacy';
@@ -15,6 +16,7 @@ const plugin: ESLint.Plugin = {
   rules: {
     'no-bootstrap-grid': noBootstrapGrid,
     'no-bootstrap-utilities': noBootstrapUtilities,
+    'no-reactstrap-components': noReactstrapComponents,
   },
   configs: {
     // Legacy config (.eslintrc format)
