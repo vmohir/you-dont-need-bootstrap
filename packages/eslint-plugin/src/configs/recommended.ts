@@ -10,6 +10,16 @@ const config: Linter.Config = {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-utilities': ['warn'],
     'you-dont-need-bootstrap/no-reactstrap-components': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-buttons': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-alerts': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-badges': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-cards': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-modals': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-navs': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-dropdowns': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-forms': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-accordion': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-spinners': 'warn',
   },
 };
 

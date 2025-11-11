@@ -56,6 +56,83 @@ const UTILITY_CATEGORIES = {
       /^(min-)?v[wh]-100$/,
     ],
   },
+  position: {
+    patterns: [
+      // Position: position-static, position-relative, position-absolute, position-fixed, position-sticky
+      /^position-(static|relative|absolute|fixed|sticky)$/,
+      // Fixed/Sticky helpers: fixed-top, fixed-bottom, sticky-top, sticky-bottom
+      /^(fixed|sticky)-(top|bottom)$/,
+      // Positioning: top-0, top-50, top-100, bottom-0, start-0, end-0, translate-middle
+      /^(top|bottom|start|end)-(0|50|100)$/,
+      /^translate-middle(-x|-y)?$/,
+    ],
+  },
+  shadows: {
+    patterns: [
+      // Shadow: shadow, shadow-sm, shadow-lg, shadow-none
+      /^shadow(-sm|-lg|-none)?$/,
+    ],
+  },
+  borders: {
+    patterns: [
+      // Border: border, border-0, border-top/end/bottom/start
+      /^border(-0|-(top|end|bottom|start))?$/,
+      // Border width: border-1, border-2, border-3, border-4, border-5
+      /^border-[1-5]$/,
+      // Rounded: rounded, rounded-{size}, rounded-circle, rounded-pill
+      /^rounded(-0|-1|-2|-3|-circle|-pill)?$/,
+      // Rounded sides: rounded-top, rounded-end, rounded-bottom, rounded-start
+      /^rounded-(top|end|bottom|start)$/,
+    ],
+  },
+  opacity: {
+    patterns: [
+      // Opacity: opacity-0, opacity-25, opacity-50, opacity-75, opacity-100
+      /^opacity-(0|25|50|75|100)$/,
+    ],
+  },
+  overflow: {
+    patterns: [
+      // Overflow: overflow-auto, overflow-hidden, overflow-visible, overflow-scroll
+      /^overflow-(auto|hidden|visible|scroll)$/,
+      // Overflow X/Y: overflow-x-auto, overflow-y-hidden, etc.
+      /^overflow-[xy]-(auto|hidden|visible|scroll)$/,
+    ],
+  },
+  visibility: {
+    patterns: [
+      // Visibility: visible, invisible
+      /^(in)?visible$/,
+      // Visually hidden: visually-hidden, visually-hidden-focusable
+      /^visually-hidden(-focusable)?$/,
+    ],
+  },
+  interactions: {
+    patterns: [
+      // User select: user-select-all, user-select-auto, user-select-none
+      /^user-select-(all|auto|none)$/,
+      // Pointer events: pe-none, pe-auto
+      /^pe-(none|auto)$/,
+    ],
+  },
+  zindex: {
+    patterns: [
+      // Z-index: z-n1, z-0, z-1, z-2, z-3
+      /^z-(n1|0|1|2|3)$/,
+    ],
+  },
+  other: {
+    patterns: [
+      // Text utilities: text-truncate, text-break
+      /^text-(truncate|break)$/,
+      // Layout: clearfix, stretched-link
+      /^(clearfix|stretched-link)$/,
+      // Aspect ratio: ratio, ratio-1x1, ratio-4x3, ratio-16x9, ratio-21x9
+      /^ratio(-1x1|-4x3|-16x9|-21x9)?$/,
+      // Vertical rule
+      /^vr$/,
+    ],
+  },
 };
 
 type UtilityCategories = keyof typeof UTILITY_CATEGORIES;
@@ -66,6 +143,15 @@ export const ALL_CATEGORIES: UtilityCategories[] = [
   'colors',
   'typography',
   'sizing',
+  'position',
+  'shadows',
+  'borders',
+  'opacity',
+  'overflow',
+  'visibility',
+  'interactions',
+  'zindex',
+  'other',
 ];
 const rule: Rule.RuleModule = {
   meta: {

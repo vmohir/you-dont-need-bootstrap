@@ -132,6 +132,256 @@ describe('no-bootstrap-utilities', () => {
             },
           ],
         },
+        // Sizing utilities
+        {
+          code: '<div class="w-100">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="h-50">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="vw-100">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Position utilities
+        {
+          code: '<div class="position-relative">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="fixed-top">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="top-0 start-0">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Shadow utilities
+        {
+          code: '<div class="shadow">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="shadow-lg">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="shadow-sm">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Border utilities
+        {
+          code: '<div class="border">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="rounded">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="rounded-circle">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Opacity utilities
+        {
+          code: '<div class="opacity-50">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="opacity-0">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="opacity-100">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Overflow utilities
+        {
+          code: '<div class="overflow-hidden">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="overflow-auto">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="overflow-x-scroll">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Visibility utilities
+        {
+          code: '<div class="visible">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="invisible">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="visually-hidden">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Interaction utilities
+        {
+          code: '<div class="user-select-none">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="pe-none">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="user-select-all">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Z-index utilities
+        {
+          code: '<div class="z-0">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="z-1">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="z-3">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        // Other utilities
+        {
+          code: '<div class="text-truncate">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="clearfix">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
+        {
+          code: '<div class="ratio ratio-16x9">Content</div>',
+          errors: [
+            {
+              messageId: 'noBootstrapUtilities',
+            },
+          ],
+        },
         // Multiple utilities
         {
           code: '<div class="d-flex justify-content-center align-items-center">Content</div>',
