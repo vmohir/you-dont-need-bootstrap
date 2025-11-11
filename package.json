@@ -25,12 +25,19 @@
     "test": "vitest",
     "test:ci": "vitest run",
     "build": "echo 'No build needed for JavaScript modules'",
-    "clean": "rm -rf node_modules packages/*/node_modules"
+    "clean": "rm -rf node_modules packages/*/node_modules",
+    "prepare": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx --no -- commitlint --edit $1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@types/node": "^22.10.2",
     "eslint": "^9.15.0",
     "prettier": "^3.6.2",
+    "simple-git-hooks": "^2.13.1",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },

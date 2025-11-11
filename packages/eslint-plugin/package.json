@@ -36,6 +36,9 @@
   "bugs": {
     "url": "https://github.com/vahidmohammadi/you-dont-need-bootstrap/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
     "test": "vitest",
@@ -46,10 +49,13 @@
     "eslint": ">=8.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/eslint": "^9.6.1",
     "@types/estree": "^1.0.8",
     "@types/estree-jsx": "^1.0.5",
     "eslint": "^9.15.0",
+    "semantic-release": "^25.0.2",
     "tsup": "^8.5.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
