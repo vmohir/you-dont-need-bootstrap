@@ -30,11 +30,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vahidmohammadi/you-dont-need-bootstrap.git",
+    "url": "https://github.com/vmohir/you-dont-need-bootstrap.git",
     "directory": "packages/eslint-plugin"
   },
   "bugs": {
-    "url": "https://github.com/vahidmohammadi/you-dont-need-bootstrap/issues"
+    "url": "https://github.com/vmohir/you-dont-need-bootstrap/issues"
   },
   "publishConfig": {
     "access": "public"

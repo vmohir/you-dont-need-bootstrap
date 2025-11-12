@@ -9,7 +9,7 @@ const rule: Rule.RuleModule = {
         "Disallow Reactstrap components and suggest modern alternatives",
       category: "Best Practices",
       recommended: true,
-      url: "https://github.com/vahidmohammadi/you-dont-need-bootstrap#reactstrap",
+      url: "https://github.com/vmohir/you-dont-need-bootstrap#reactstrap",
     },
     messages: {
       noReactstrapComponents: "Avoid Reactstrap component '{{componentName}}'",

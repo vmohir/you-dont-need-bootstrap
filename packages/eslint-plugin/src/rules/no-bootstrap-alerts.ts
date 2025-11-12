@@ -9,5 +9,5 @@ const ALERT_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'alert',
   patterns: ALERT_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#alerts',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#alerts',
 });

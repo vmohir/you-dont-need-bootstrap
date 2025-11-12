@@ -9,5 +9,5 @@ const BADGE_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'badge',
   patterns: BADGE_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#badges',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#badges',
 });

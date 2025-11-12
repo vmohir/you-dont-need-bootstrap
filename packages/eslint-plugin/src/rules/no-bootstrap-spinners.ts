@@ -8,5 +8,5 @@ const SPINNER_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'spinner',
   patterns: SPINNER_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#spinners',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#spinners',
 });

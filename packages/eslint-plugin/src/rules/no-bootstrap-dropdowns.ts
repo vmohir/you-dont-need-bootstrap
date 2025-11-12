@@ -10,5 +10,5 @@ export default createBootstrapComponentRule({
   name: 'dropdown',
   patterns: DROPDOWN_PATTERNS,
   dataAttributes: ['dropdown'],
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#dropdowns',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#dropdowns',
 });

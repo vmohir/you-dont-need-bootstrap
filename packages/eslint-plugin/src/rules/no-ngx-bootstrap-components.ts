@@ -8,7 +8,7 @@ const rule: Rule.RuleModule = {
       description: 'Disallow NGX Bootstrap components',
       category: 'Best Practices',
       recommended: true,
-      url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#ngx-bootstrap',
+      url: 'https://github.com/vmohir/you-dont-need-bootstrap#ngx-bootstrap',
     },
     messages: {
       noNgxBootstrapComponents: 'Avoid NGX Bootstrap component "{{componentName}}"',

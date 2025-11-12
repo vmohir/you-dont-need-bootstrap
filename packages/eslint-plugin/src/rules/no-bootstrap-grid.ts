@@ -23,7 +23,7 @@ const rule: Rule.RuleModule = {
       description: 'Disallow Bootstrap grid classes and suggest CSS Grid alternatives',
       category: 'Best Practices',
       recommended: true,
-      url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#grid-system',
+      url: 'https://github.com/vmohir/you-dont-need-bootstrap#grid-system',
     },
     messages: {
       noBootstrapGrid: '{{message}}',

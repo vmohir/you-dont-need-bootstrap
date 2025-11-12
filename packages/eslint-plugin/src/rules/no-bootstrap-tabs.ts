@@ -11,5 +11,5 @@ export default createBootstrapComponentRule({
   name: 'tab',
   patterns: TAB_PATTERNS,
   dataAttributes: ['tab', 'pill'],
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#tabs',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#tabs',
 });

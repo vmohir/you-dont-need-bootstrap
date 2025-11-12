@@ -44,5 +44,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modern ESLint flat config support (ESLint >= 9.0.0)
 - Legacy .eslintrc format support (ESLint >= 8.0.0)
 
-[unreleased]: https://github.com/vahidmohammadi/you-dont-need-bootstrap/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/vahidmohammadi/you-dont-need-bootstrap/releases/tag/v0.1.0
+[unreleased]: https://github.com/vmohir/you-dont-need-bootstrap/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/vmohir/you-dont-need-bootstrap/releases/tag/v0.1.0

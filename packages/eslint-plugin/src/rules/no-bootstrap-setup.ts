@@ -8,7 +8,7 @@ const rule: Rule.RuleModule = {
       description: 'Disallow Bootstrap imports (CSS and JS)',
       category: 'Best Practices',
       recommended: true,
-      url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#setup',
+      url: 'https://github.com/vmohir/you-dont-need-bootstrap#setup',
     },
     messages: {
       noBootstrapImport: 'Avoid importing Bootstrap {{type}}: "{{source}}"',

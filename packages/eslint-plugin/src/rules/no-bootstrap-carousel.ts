@@ -8,5 +8,5 @@ export default createBootstrapComponentRule({
   name: 'carousel',
   patterns: CAROUSEL_PATTERNS,
   dataAttributes: ['prev', 'next'],
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#carousel',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#carousel',
 });

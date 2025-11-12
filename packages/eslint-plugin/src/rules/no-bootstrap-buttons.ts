@@ -12,5 +12,5 @@ const BUTTON_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'button',
   patterns: BUTTON_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#buttons',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#buttons',
 });

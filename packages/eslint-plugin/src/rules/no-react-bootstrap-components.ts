@@ -8,7 +8,7 @@ const rule: Rule.RuleModule = {
       description: 'Disallow React Bootstrap components',
       category: 'Best Practices',
       recommended: true,
-      url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#react-bootstrap',
+      url: 'https://github.com/vmohir/you-dont-need-bootstrap#react-bootstrap',
     },
     messages: {
       noReactBootstrapComponents: 'Avoid React Bootstrap component "{{componentName}}"',

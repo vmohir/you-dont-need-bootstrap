@@ -2,7 +2,7 @@
 
 ESLint plugin to detect Bootstrap usage and suggest modern CSS alternatives.
 
-Part of the [You-Dont-Need-Bootstrap](https://github.com/vahidmohammadi/you-dont-need-bootstrap) project.
+Part of the [You-Dont-Need-Bootstrap](https://github.com/vmohir/you-dont-need-bootstrap) project.
 
 ## Installation
 
@@ -227,10 +227,10 @@ See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
 
 ## License
 
-MIT © [Vahid Mohammadi](https://github.com/vahidmohammadi)
+MIT © [Vahid Mohammadi](https://github.com/vmohir)
 
 ## Resources
 
-- [Main Repository](https://github.com/vahidmohammadi/you-dont-need-bootstrap)
-- [Documentation](https://github.com/vahidmohammadi/you-dont-need-bootstrap#readme)
-- [Report Issues](https://github.com/vahidmohammadi/you-dont-need-bootstrap/issues)
+- [Main Repository](https://github.com/vmohir/you-dont-need-bootstrap)
+- [Documentation](https://github.com/vmohir/you-dont-need-bootstrap#readme)
+- [Report Issues](https://github.com/vmohir/you-dont-need-bootstrap/issues)

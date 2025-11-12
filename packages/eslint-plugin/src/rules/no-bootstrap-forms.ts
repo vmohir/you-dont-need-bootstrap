@@ -14,5 +14,5 @@ const FORM_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'form',
   patterns: FORM_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#forms',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#forms',
 });

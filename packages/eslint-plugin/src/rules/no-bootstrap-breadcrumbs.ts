@@ -7,5 +7,5 @@ const BREADCRUMB_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'breadcrumb',
   patterns: BREADCRUMB_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#breadcrumbs',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#breadcrumbs',
 });

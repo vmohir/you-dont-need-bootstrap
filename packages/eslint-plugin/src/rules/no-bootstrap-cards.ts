@@ -11,5 +11,5 @@ const CARD_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'card',
   patterns: CARD_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#cards',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#cards',
 });

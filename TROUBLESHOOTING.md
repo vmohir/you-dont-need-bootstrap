@@ -238,7 +238,7 @@ npx eslint --clear-cache
 
 ## Need More Help?
 
-[Open an issue](https://github.com/vahidmohammadi/you-dont-need-bootstrap/issues) with:
+[Open an issue](https://github.com/vmohir/you-dont-need-bootstrap/issues) with:
 
 1. Your ESLint version (`npx eslint --version`)
 2. Your Node version (`node --version`)

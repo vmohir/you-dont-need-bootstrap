@@ -10,5 +10,5 @@ const PROGRESS_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'progress',
   patterns: PROGRESS_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#progress',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#progress',
 });

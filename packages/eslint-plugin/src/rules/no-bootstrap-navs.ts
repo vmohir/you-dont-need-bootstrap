@@ -13,5 +13,5 @@ const NAV_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'nav',
   patterns: NAV_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#navs',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#navs',
 });

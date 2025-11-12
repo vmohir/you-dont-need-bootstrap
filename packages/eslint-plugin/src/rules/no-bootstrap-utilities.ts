@@ -160,7 +160,7 @@ const rule: Rule.RuleModule = {
       description: 'Disallow Bootstrap utility classes and suggest modern CSS alternatives',
       category: 'Best Practices',
       recommended: true,
-      url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#utilities',
+      url: 'https://github.com/vmohir/you-dont-need-bootstrap#utilities',
     },
     messages: {
       noBootstrapUtilities: '{{message}}',

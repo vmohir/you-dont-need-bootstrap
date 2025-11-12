@@ -6,7 +6,7 @@
   "description": "Modern CSS alternatives to Bootstrap - Stop reinventing the wheel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vahidmohammadi/you-dont-need-bootstrap.git"
+    "url": "https://github.com/vmohir/you-dont-need-bootstrap.git"
   },
   "keywords": [
     "bootstrap",

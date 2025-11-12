@@ -13,5 +13,5 @@ export default createBootstrapComponentRule({
   name: 'offcanvas',
   patterns: OFFCANVAS_PATTERNS,
   dataAttributes: ['offcanvas'],
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#offcanvas',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#offcanvas',
 });

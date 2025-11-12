@@ -9,5 +9,5 @@ export default createBootstrapComponentRule({
   name: 'collapse',
   patterns: COLLAPSE_PATTERNS,
   dataAttributes: ['collapse'],
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#collapse',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#collapse',
 });

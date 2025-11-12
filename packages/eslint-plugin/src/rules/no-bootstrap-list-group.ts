@@ -13,5 +13,5 @@ const LIST_GROUP_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'list-group',
   patterns: LIST_GROUP_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#list-group',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#list-group',
 });

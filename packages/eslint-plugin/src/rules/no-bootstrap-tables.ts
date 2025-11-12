@@ -11,5 +11,5 @@ const TABLE_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'table',
   patterns: TABLE_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#tables',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#tables',
 });

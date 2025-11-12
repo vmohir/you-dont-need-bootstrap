@@ -8,5 +8,5 @@ const ACCORDION_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'accordion',
   patterns: ACCORDION_PATTERNS,
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#accordion',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#accordion',
 });

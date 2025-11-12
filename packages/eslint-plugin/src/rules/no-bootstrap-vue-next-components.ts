@@ -8,7 +8,7 @@ const rule: Rule.RuleModule = {
       description: 'Disallow Bootstrap Vue Next components',
       category: 'Best Practices',
       recommended: true,
-      url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#bootstrap-vue-next',
+      url: 'https://github.com/vmohir/you-dont-need-bootstrap#bootstrap-vue-next',
     },
     messages: {
       noBootstrapVueNextComponents: 'Avoid Bootstrap Vue Next component "{{componentName}}"',

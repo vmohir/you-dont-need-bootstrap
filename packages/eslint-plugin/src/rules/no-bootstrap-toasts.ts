@@ -11,5 +11,5 @@ export default createBootstrapComponentRule({
   name: 'toast',
   patterns: TOAST_PATTERNS,
   dataAttributes: ['toast'],
-  url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#toasts',
+  url: 'https://github.com/vmohir/you-dont-need-bootstrap#toasts',
 });

@@ -2,7 +2,7 @@
 
 Modern CSS has evolved significantly, offering native solutions for layouts, components, and utilities that previously required Bootstrap. This guide provides modern CSS alternatives to Bootstrap, helping you write cleaner, more maintainable code with better performance and smaller bundle sizes.
 
-[![GitHub stars](https://img.shields.io/github/stars/vahidmohammadi/you-dont-need-bootstrap.svg?style=social&label=Star)](https://github.com/vahidmohammadi/you-dont-need-bootstrap)
+[![GitHub stars](https://img.shields.io/github/stars/vahidmohammadi/you-dont-need-bootstrap.svg?style=social&label=Star)](https://github.com/vmohir/you-dont-need-bootstrap)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -915,13 +915,13 @@ export default [
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-Found a better alternative? Have a suggestion? [Open an issue](https://github.com/vahidmohammadi/you-dont-need-bootstrap/issues) or submit a pull request!
+Found a better alternative? Have a suggestion? [Open an issue](https://github.com/vmohir/you-dont-need-bootstrap/issues) or submit a pull request!
 
 ---
 
 ## License
 
-MIT © [Vahid Mohammadi](https://github.com/vahidmohammadi)
+MIT © [Vahid Mohammadi](https://github.com/vmohir)
 
 ---
 
