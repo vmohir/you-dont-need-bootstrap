@@ -1,0 +1,44 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap display classes ('d-flex')",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap flexbox classes ('justify-content-center', 'align-items-center')",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap typography classes ('text-center', 'fw-bold')",
+    "line": 8,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('text-primary')",
+    "line": 8,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap spacing classes ('mt-3', 'mb-4', 'p-2')",
+    "line": 10,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('text-muted')",
+    "line": 11,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap sizing classes ('w-100', 'h-100')",
+    "line": 13,
+    "column": 12
+  }
+]

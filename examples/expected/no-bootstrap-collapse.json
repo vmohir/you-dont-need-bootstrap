@@ -1,0 +1,26 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-collapse",
+    "message": "Avoid Bootstrap collapse data attribute \"data-bs-toggle=\"collapse\"\"",
+    "line": 7,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-collapse",
+    "message": "Avoid Bootstrap collapse classes \"collapse\"",
+    "line": 10,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card, card-body\"",
+    "line": 11,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-collapse",
+    "message": "Avoid Bootstrap collapse classes \"collapsing\"",
+    "line": 15,
+    "column": 12
+  }
+]

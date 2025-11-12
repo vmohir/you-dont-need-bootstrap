@@ -43,7 +43,6 @@ const plugin: ESLint.Plugin = {
   rules: {
     'no-bootstrap-grid': noBootstrapGrid,
     'no-bootstrap-utilities': noBootstrapUtilities,
-    'no-reactstrap-components': noReactstrapComponents,
     'no-bootstrap-buttons': noBootstrapButtons,
     'no-bootstrap-alerts': noBootstrapAlerts,
     'no-bootstrap-badges': noBootstrapBadges,
@@ -66,6 +65,7 @@ const plugin: ESLint.Plugin = {
     'no-bootstrap-collapse': noBootstrapCollapse,
     'no-bootstrap-tabs': noBootstrapTabs,
     'no-bootstrap-setup': noBootstrapSetup,
+    'no-reactstrap-components': noReactstrapComponents,
     'no-react-bootstrap-components': noReactBootstrapComponents,
     'no-bootstrap-vue-components': noBootstrapVueComponents,
     'no-bootstrap-vue-next-components': noBootstrapVueNextComponents,

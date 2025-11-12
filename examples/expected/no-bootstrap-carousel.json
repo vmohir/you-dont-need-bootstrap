@@ -1,0 +1,80 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel\"",
+    "line": 6,
+    "column": 10
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-indicators\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-inner\"",
+    "line": 11,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-item\"",
+    "line": 12,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-caption\"",
+    "line": 13,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-item\"",
+    "line": 15,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-caption\"",
+    "line": 16,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-control-prev\"",
+    "line": 19,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel data attribute \"data-bs-slide=\"prev\"\"",
+    "line": 19,
+    "column": 49
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-control-prev-icon\"",
+    "line": 20,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-control-next\"",
+    "line": 22,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel data attribute \"data-bs-slide=\"next\"\"",
+    "line": 22,
+    "column": 49
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-carousel",
+    "message": "Avoid Bootstrap carousel classes \"carousel-control-next-icon\"",
+    "line": 23,
+    "column": 15
+  }
+]

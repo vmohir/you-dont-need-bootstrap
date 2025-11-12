@@ -1,0 +1,32 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-list-group",
+    "message": "Avoid Bootstrap list-group classes \"list-group\"",
+    "line": 6,
+    "column": 9
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-list-group",
+    "message": "Avoid Bootstrap list-group classes \"list-group-item\"",
+    "line": 7,
+    "column": 11
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-list-group",
+    "message": "Avoid Bootstrap list-group classes \"list-group-item\"",
+    "line": 8,
+    "column": 11
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-list-group",
+    "message": "Avoid Bootstrap list-group classes \"list-group-item, list-group-item-action\"",
+    "line": 9,
+    "column": 11
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-list-group",
+    "message": "Avoid Bootstrap list-group classes \"list-group-item\"",
+    "line": 10,
+    "column": 11
+  }
+]

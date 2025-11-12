@@ -1,0 +1,38 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-toasts",
+    "message": "Avoid Bootstrap toast classes \"toast-container\"",
+    "line": 6,
+    "column": 10
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-toasts",
+    "message": "Avoid Bootstrap toast classes \"toast\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-toasts",
+    "message": "Avoid Bootstrap toast data attribute \"data-bs-toggle=\"toast\"\"",
+    "line": 7,
+    "column": 30
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-toasts",
+    "message": "Avoid Bootstrap toast classes \"toast-header\"",
+    "line": 8,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-toasts",
+    "message": "Avoid Bootstrap toast data attribute \"data-bs-dismiss=\"toast\"\"",
+    "line": 10,
+    "column": 19
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-toasts",
+    "message": "Avoid Bootstrap toast classes \"toast-body\"",
+    "line": 12,
+    "column": 14
+  }
+]

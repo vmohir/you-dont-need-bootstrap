@@ -1,0 +1,38 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card\"",
+    "line": 6,
+    "column": 10
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card-header\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card-body\"",
+    "line": 8,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card-title\"",
+    "line": 9,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card-text\"",
+    "line": 10,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-cards",
+    "message": "Avoid Bootstrap card classes \"card-footer\"",
+    "line": 12,
+    "column": 12
+  }
+]

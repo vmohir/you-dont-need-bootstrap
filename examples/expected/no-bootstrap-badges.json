@@ -1,0 +1,44 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('bg-primary')",
+    "line": 7,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-badges",
+    "message": "Avoid Bootstrap badge classes \"badge\"",
+    "line": 7,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('bg-secondary')",
+    "line": 8,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-badges",
+    "message": "Avoid Bootstrap badge classes \"badge\"",
+    "line": 8,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('rounded-pill', 'bg-success')",
+    "line": 9,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-badges",
+    "message": "Avoid Bootstrap badge classes \"badge\"",
+    "line": 9,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-badges",
+    "message": "Avoid Bootstrap badge classes \"badge\"",
+    "line": 10,
+    "column": 13
+  }
+]

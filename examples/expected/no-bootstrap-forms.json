@@ -1,0 +1,38 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-forms",
+    "message": "Avoid Bootstrap form classes \"form-label\"",
+    "line": 8,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-forms",
+    "message": "Avoid Bootstrap form classes \"form-control\"",
+    "line": 9,
+    "column": 29
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-forms",
+    "message": "Avoid Bootstrap form classes \"form-check\"",
+    "line": 11,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-forms",
+    "message": "Avoid Bootstrap form classes \"form-check-input\"",
+    "line": 12,
+    "column": 32
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-forms",
+    "message": "Avoid Bootstrap form classes \"form-check-label\"",
+    "line": 13,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-forms",
+    "message": "Avoid Bootstrap form classes \"form-select\"",
+    "line": 15,
+    "column": 15
+  }
+]

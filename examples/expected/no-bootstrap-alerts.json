@@ -1,0 +1,32 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-alerts",
+    "message": "Avoid Bootstrap alert classes \"alert, alert-success\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-alerts",
+    "message": "Avoid Bootstrap alert classes \"alert, alert-danger, alert-dismissible\"",
+    "line": 8,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-buttons",
+    "message": "Avoid Bootstrap button classes \"btn-close\"",
+    "line": 10,
+    "column": 17
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-close",
+    "message": "Avoid Bootstrap close button classes \"btn-close\"",
+    "line": 10,
+    "column": 17
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-alerts",
+    "message": "Avoid Bootstrap alert classes \"alert, alert-warning\"",
+    "line": 12,
+    "column": 12
+  }
+]

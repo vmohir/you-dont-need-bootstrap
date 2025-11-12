@@ -1,0 +1,56 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal data attribute \"data-bs-toggle=\"modal\"\"",
+    "line": 7,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal\"",
+    "line": 10,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal-dialog, modal-lg\"",
+    "line": 11,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal-content\"",
+    "line": 12,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal-header\"",
+    "line": 13,
+    "column": 18
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal-title\"",
+    "line": 14,
+    "column": 19
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal-body\"",
+    "line": 16,
+    "column": 18
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal classes \"modal-footer\"",
+    "line": 17,
+    "column": 18
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-modals",
+    "message": "Avoid Bootstrap modal data attribute \"data-bs-dismiss=\"modal\"\"",
+    "line": 18,
+    "column": 23
+  }
+]

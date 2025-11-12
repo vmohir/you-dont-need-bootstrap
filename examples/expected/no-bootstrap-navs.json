@@ -1,0 +1,74 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('bg-dark')",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"navbar, navbar-expand-lg, navbar-dark\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"navbar-brand\"",
+    "line": 8,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"navbar-nav\"",
+    "line": 9,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav-item\"",
+    "line": 10,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav-link\"",
+    "line": 11,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav-item\"",
+    "line": 13,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav-link\"",
+    "line": 14,
+    "column": 16
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav, nav-pills\"",
+    "line": 18,
+    "column": 11
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tabs",
+    "message": "Avoid Bootstrap tab classes \"nav-pills\"",
+    "line": 18,
+    "column": 11
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav-item\"",
+    "line": 19,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-navs",
+    "message": "Avoid Bootstrap nav classes \"nav-link\"",
+    "line": 19,
+    "column": 37
+  }
+]

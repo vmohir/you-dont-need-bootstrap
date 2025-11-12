@@ -1,0 +1,50 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-accordion",
+    "message": "Avoid Bootstrap accordion classes \"accordion\"",
+    "line": 6,
+    "column": 10
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-accordion",
+    "message": "Avoid Bootstrap accordion classes \"accordion-item\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-accordion",
+    "message": "Avoid Bootstrap accordion classes \"accordion-header\"",
+    "line": 8,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-accordion",
+    "message": "Avoid Bootstrap accordion classes \"accordion-button\"",
+    "line": 9,
+    "column": 19
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-collapse",
+    "message": "Avoid Bootstrap collapse data attribute \"data-bs-toggle=\"collapse\"\"",
+    "line": 9,
+    "column": 48
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-accordion",
+    "message": "Avoid Bootstrap accordion classes \"accordion-collapse\"",
+    "line": 13,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-collapse",
+    "message": "Avoid Bootstrap collapse classes \"collapse\"",
+    "line": 13,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-accordion",
+    "message": "Avoid Bootstrap accordion classes \"accordion-body\"",
+    "line": 14,
+    "column": 16
+  }
+]

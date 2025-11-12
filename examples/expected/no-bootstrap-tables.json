@@ -1,0 +1,26 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tables",
+    "message": "Avoid Bootstrap table classes \"table-responsive\"",
+    "line": 6,
+    "column": 10
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tables",
+    "message": "Avoid Bootstrap table classes \"table, table-striped, table-hover\"",
+    "line": 7,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tables",
+    "message": "Avoid Bootstrap table classes \"caption-top\"",
+    "line": 8,
+    "column": 18
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tables",
+    "message": "Avoid Bootstrap table classes \"table-dark\"",
+    "line": 9,
+    "column": 16
+  }
+]

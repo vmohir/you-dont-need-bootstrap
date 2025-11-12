@@ -1,0 +1,8 @@
+[
+  {
+    "ruleId": null,
+    "message": "Parsing error: Unexpected character '@'",
+    "line": 8,
+    "column": 1
+  }
+]

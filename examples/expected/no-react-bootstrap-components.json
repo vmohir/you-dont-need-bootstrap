@@ -1,0 +1,38 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-react-bootstrap-components",
+    "message": "Avoid React Bootstrap component \"Button\"",
+    "line": 9,
+    "column": 7
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-react-bootstrap-components",
+    "message": "Avoid React Bootstrap component \"Alert\"",
+    "line": 10,
+    "column": 7
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-react-bootstrap-components",
+    "message": "Avoid React Bootstrap component \"Card\"",
+    "line": 11,
+    "column": 7
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-react-bootstrap-components",
+    "message": "Avoid React Bootstrap component \"Form\"",
+    "line": 14,
+    "column": 7
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-react-bootstrap-components",
+    "message": "Avoid React Bootstrap component \"Modal\"",
+    "line": 20,
+    "column": 7
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-react-bootstrap-components",
+    "message": "Avoid React Bootstrap component \"Navbar\"",
+    "line": 23,
+    "column": 7
+  }
+]

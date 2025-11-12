@@ -1,0 +1,44 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap CSS: \"bootstrap/dist/css/bootstrap.css\"",
+    "line": 4,
+    "column": 1
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap CSS: \"bootstrap/dist/css/bootstrap.min.css\"",
+    "line": 5,
+    "column": 1
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap SCSS: \"bootstrap/scss/bootstrap.scss\"",
+    "line": 8,
+    "column": 1
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap package: \"bootstrap\"",
+    "line": 11,
+    "column": 1
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap JavaScript: \"bootstrap/dist/js/bootstrap.bundle.js\"",
+    "line": 12,
+    "column": 1
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap package: \"bootstrap\"",
+    "line": 15,
+    "column": 19
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-setup",
+    "message": "Avoid importing Bootstrap CSS: \"bootstrap/dist/css/bootstrap.css\"",
+    "line": 16,
+    "column": 22
+  }
+]

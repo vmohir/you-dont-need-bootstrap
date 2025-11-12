@@ -43,6 +43,8 @@
     "build": "tsup",
     "test": "vitest",
     "test:ci": "vitest run",
+    "test:examples": "node ../../examples/scripts/test-examples.mjs",
+    "update:examples": "node ../../examples/scripts/update-examples.mjs",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {

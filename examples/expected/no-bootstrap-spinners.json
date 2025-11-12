@@ -1,0 +1,26 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-spinners",
+    "message": "Avoid Bootstrap spinner classes \"spinner-border\"",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap visibility classes ('visually-hidden')",
+    "line": 8,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-utilities",
+    "message": "Avoid Bootstrap colors classes ('text-primary')",
+    "line": 10,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-spinners",
+    "message": "Avoid Bootstrap spinner classes \"spinner-grow, spinner-grow-sm\"",
+    "line": 10,
+    "column": 12
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-breadcrumbs",
+    "message": "Avoid Bootstrap breadcrumb classes \"breadcrumb\"",
+    "line": 7,
+    "column": 11
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-breadcrumbs",
+    "message": "Avoid Bootstrap breadcrumb classes \"breadcrumb-item\"",
+    "line": 8,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-breadcrumbs",
+    "message": "Avoid Bootstrap breadcrumb classes \"breadcrumb-item\"",
+    "line": 9,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-breadcrumbs",
+    "message": "Avoid Bootstrap breadcrumb classes \"breadcrumb-item\"",
+    "line": 10,
+    "column": 13
+  }
+]

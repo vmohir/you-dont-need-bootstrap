@@ -1,0 +1,56 @@
+[
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover data attribute \"data-bs-toggle=\"tooltip\"\"",
+    "line": 7,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover data attribute \"data-bs-toggle=\"popover\"\"",
+    "line": 10,
+    "column": 15
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"tooltip, bs-tooltip-top\"",
+    "line": 13,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"tooltip-arrow\"",
+    "line": 14,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"tooltip-inner\"",
+    "line": 15,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"popover\"",
+    "line": 17,
+    "column": 12
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"popover-arrow\"",
+    "line": 18,
+    "column": 14
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"popover-header\"",
+    "line": 19,
+    "column": 13
+  },
+  {
+    "ruleId": "you-dont-need-bootstrap/no-bootstrap-tooltips",
+    "message": "Avoid Bootstrap tooltip/popover classes \"popover-body\"",
+    "line": 20,
+    "column": 14
+  }
+]
