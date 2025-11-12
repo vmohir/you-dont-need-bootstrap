@@ -12,6 +12,22 @@ import noBootstrapDropdowns from './rules/no-bootstrap-dropdowns';
 import noBootstrapForms from './rules/no-bootstrap-forms';
 import noBootstrapAccordion from './rules/no-bootstrap-accordion';
 import noBootstrapSpinners from './rules/no-bootstrap-spinners';
+import noBootstrapListGroup from './rules/no-bootstrap-list-group';
+import noBootstrapBreadcrumbs from './rules/no-bootstrap-breadcrumbs';
+import noBootstrapPagination from './rules/no-bootstrap-pagination';
+import noBootstrapProgress from './rules/no-bootstrap-progress';
+import noBootstrapToasts from './rules/no-bootstrap-toasts';
+import noBootstrapTables from './rules/no-bootstrap-tables';
+import noBootstrapOffcanvas from './rules/no-bootstrap-offcanvas';
+import noBootstrapCarousel from './rules/no-bootstrap-carousel';
+import noBootstrapTooltips from './rules/no-bootstrap-tooltips';
+import noBootstrapCollapse from './rules/no-bootstrap-collapse';
+import noBootstrapTabs from './rules/no-bootstrap-tabs';
+import noBootstrapSetup from './rules/no-bootstrap-setup';
+import noReactBootstrapComponents from './rules/no-react-bootstrap-components';
+import noBootstrapVueComponents from './rules/no-bootstrap-vue-components';
+import noBootstrapVueNextComponents from './rules/no-bootstrap-vue-next-components';
+import noNgxBootstrapComponents from './rules/no-ngx-bootstrap-components';
 import recommended from './configs/recommended';
 import strict from './configs/strict';
 import recommendedLegacy from './configs/recommended-legacy';
@@ -38,6 +54,22 @@ const plugin: ESLint.Plugin = {
     'no-bootstrap-forms': noBootstrapForms,
     'no-bootstrap-accordion': noBootstrapAccordion,
     'no-bootstrap-spinners': noBootstrapSpinners,
+    'no-bootstrap-list-group': noBootstrapListGroup,
+    'no-bootstrap-breadcrumbs': noBootstrapBreadcrumbs,
+    'no-bootstrap-pagination': noBootstrapPagination,
+    'no-bootstrap-progress': noBootstrapProgress,
+    'no-bootstrap-toasts': noBootstrapToasts,
+    'no-bootstrap-tables': noBootstrapTables,
+    'no-bootstrap-offcanvas': noBootstrapOffcanvas,
+    'no-bootstrap-carousel': noBootstrapCarousel,
+    'no-bootstrap-tooltips': noBootstrapTooltips,
+    'no-bootstrap-collapse': noBootstrapCollapse,
+    'no-bootstrap-tabs': noBootstrapTabs,
+    'no-bootstrap-setup': noBootstrapSetup,
+    'no-react-bootstrap-components': noReactBootstrapComponents,
+    'no-bootstrap-vue-components': noBootstrapVueComponents,
+    'no-bootstrap-vue-next-components': noBootstrapVueNextComponents,
+    'no-ngx-bootstrap-components': noNgxBootstrapComponents,
   },
   configs: {
     // Legacy config (.eslintrc format)

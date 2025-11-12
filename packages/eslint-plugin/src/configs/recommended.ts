@@ -8,8 +8,7 @@ const config: Linter.Config = {
   plugins: {},
   rules: {
     'you-dont-need-bootstrap/no-bootstrap-grid': 'warn',
-    'you-dont-need-bootstrap/no-bootstrap-utilities': ['warn'],
-    'you-dont-need-bootstrap/no-reactstrap-components': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-utilities': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-buttons': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-alerts': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-badges': 'warn',
@@ -20,6 +19,18 @@ const config: Linter.Config = {
     'you-dont-need-bootstrap/no-bootstrap-forms': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-accordion': 'warn',
     'you-dont-need-bootstrap/no-bootstrap-spinners': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-list-group': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-breadcrumbs': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-pagination': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-progress': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-toasts': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-tables': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-offcanvas': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-carousel': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-tooltips': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-collapse': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-tabs': 'warn',
+    'you-dont-need-bootstrap/no-bootstrap-setup': 'warn',
   },
 };
 

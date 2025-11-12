@@ -1,13 +1,12 @@
 import { createBootstrapComponentRule } from '../utils';
 
 const BUTTON_PATTERNS = [
-  /^btn$/,
+  /^btn(-(sm|lg))?$/,
   /^btn-(primary|secondary|success|danger|warning|info|light|dark|link)$/,
   /^btn-outline-(primary|secondary|success|danger|warning|info|light|dark)$/,
-  /^btn-(sm|lg)$/,
-  /^btn-block$/,
+  /^btn-(block|toolbar)$/,
   /^btn-group(-vertical|-sm|-lg)?$/,
-  /^btn-toolbar$/,
+  /^btn-close(-white)?$/,
 ];
 
 export default createBootstrapComponentRule({

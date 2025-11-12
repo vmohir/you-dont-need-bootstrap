@@ -11,5 +11,6 @@ const MODAL_PATTERNS = [
 export default createBootstrapComponentRule({
   name: 'modal',
   patterns: MODAL_PATTERNS,
+  dataAttributes: ['modal'],
   url: 'https://github.com/vahidmohammadi/you-dont-need-bootstrap#modals',
 });

@@ -83,12 +83,35 @@ export function createMessage(classes: string[], category: string): string {
 }
 
 /**
+ * Get the value of a data attribute
+ */
+export function getDataAttributeValue(node: Node): string | null {
+  if (node.type !== 'JSXAttribute' || !node.value) {
+    return null;
+  }
+
+  if (node.value.type === 'Literal' && typeof node.value.value === 'string') {
+    return node.value.value;
+  }
+
+  if (node.value.type === 'JSXExpressionContainer') {
+    const expr = node.value.expression;
+    if (expr.type === 'Literal' && typeof expr.value === 'string') {
+      return expr.value;
+    }
+  }
+
+  return null;
+}
+
+/**
  * Factory function to create a Bootstrap detection rule
  */
 export function createBootstrapComponentRule(config: {
   name: string;
   patterns: RegExp[];
   url: string;
+  dataAttributes?: string[];
 }): Rule.RuleModule {
   return {
     meta: {
@@ -101,6 +124,7 @@ export function createBootstrapComponentRule(config: {
       },
       messages: {
         noBootstrap: 'Avoid Bootstrap {{name}} classes "{{classes}}"',
+        noBootstrapData: 'Avoid Bootstrap {{name}} data attribute "{{attribute}}"',
       },
     },
 
@@ -113,14 +137,43 @@ export function createBootstrapComponentRule(config: {
         const { matched } = matchPatterns(classNames, config.patterns);
 
         if (matched.length > 0) {
-          const capitalizedName =
-            config.name.charAt(0).toUpperCase() + config.name.slice(1);
           context.report({
             node,
-            messageId: `noBootstrap${capitalizedName}`,
+            messageId: `noBootstrap`,
             data: {
               name: config.name,
               classes: matched.join(', '),
+            },
+          });
+        }
+      };
+
+      const checkDataAttribute = (node: Node): void => {
+        if (!config.dataAttributes || config.dataAttributes.length === 0) return;
+
+        if (node.type !== 'JSXAttribute' || node.name.type !== 'JSXIdentifier') {
+          return;
+        }
+
+        const attrName = node.name.name;
+        const attrValue = getDataAttributeValue(node);
+
+        if (!attrValue) return;
+
+        // Check for data-bs-toggle, data-bs-dismiss, data-bs-slide, etc.
+        if (
+          (attrName === 'data-bs-toggle' ||
+           attrName === 'data-bs-dismiss' ||
+           attrName === 'data-bs-slide' ||
+           attrName === 'data-bs-slide-to') &&
+          config.dataAttributes.includes(attrValue)
+        ) {
+          context.report({
+            node,
+            messageId: `noBootstrapData`,
+            data: {
+              name: config.name,
+              attribute: `${attrName}="${attrValue}"`,
             },
           });
         }
@@ -135,6 +188,9 @@ export function createBootstrapComponentRule(config: {
             (node.name.name === 'className' || node.name.name === 'class')
           ) {
             checkClassAttribute(node);
+          } else {
+            // Check data attributes
+            checkDataAttribute(node);
           }
         },
 
