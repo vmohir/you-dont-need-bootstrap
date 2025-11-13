@@ -1,6 +1,12 @@
-import type { Rule } from 'eslint';
-import type { Node } from 'estree-jsx';
-import { extractClassNames, getClassValue, matchPatterns, createMessage } from '../utils';
+import type { Rule } from "eslint";
+import type { Node } from "estree-jsx";
+import {
+  createMessage,
+  extractClassNames,
+  getClassValue,
+  isClassNameAttribute,
+  matchPatterns,
+} from "../utils";
 
 // Bootstrap utility patterns organized by category (optimized by merging similar patterns)
 const UTILITY_CATEGORIES = {
@@ -137,42 +143,43 @@ const UTILITY_CATEGORIES = {
 
 type UtilityCategories = keyof typeof UTILITY_CATEGORIES;
 export const ALL_CATEGORIES: UtilityCategories[] = [
-  'spacing',
-  'display',
-  'flexbox',
-  'colors',
-  'typography',
-  'sizing',
-  'position',
-  'shadows',
-  'borders',
-  'opacity',
-  'overflow',
-  'visibility',
-  'interactions',
-  'zindex',
-  'other',
+  "spacing",
+  "display",
+  "flexbox",
+  "colors",
+  "typography",
+  "sizing",
+  "position",
+  "shadows",
+  "borders",
+  "opacity",
+  "overflow",
+  "visibility",
+  "interactions",
+  "zindex",
+  "other",
 ];
 const rule: Rule.RuleModule = {
   meta: {
-    type: 'suggestion',
+    type: "suggestion",
     docs: {
-      description: 'Disallow Bootstrap utility classes and suggest modern CSS alternatives',
-      category: 'Best Practices',
+      description:
+        "Disallow Bootstrap utility classes and suggest modern CSS alternatives",
+      category: "Best Practices",
       recommended: true,
-      url: 'https://github.com/vmohir/you-dont-need-bootstrap#utilities',
+      url: "https://github.com/vmohir/you-dont-need-bootstrap#utilities",
     },
     messages: {
-      noBootstrapUtilities: '{{message}}',
+      noBootstrapUtilities: "{{message}}",
     },
     schema: [
       {
-        type: 'object',
+        type: "object",
         properties: {
           categories: {
-            type: 'array',
+            type: "array",
             items: {
-              type: 'string',
+              type: "string",
               enum: ALL_CATEGORIES,
             },
             default: ALL_CATEGORIES,
@@ -184,15 +191,19 @@ const rule: Rule.RuleModule = {
   },
 
   create(context): Rule.RuleListener {
-    const options = (context.options[0] as { categories?: UtilityCategories[] } | undefined) ?? {};
-    const enabledCategories: UtilityCategories[] = options.categories ?? ALL_CATEGORIES;
+    const options =
+      (context.options[0] as
+        | { categories?: UtilityCategories[] }
+        | undefined) ?? {};
+    const enabledCategories: UtilityCategories[] =
+      options.categories ?? ALL_CATEGORIES;
 
     // Build patterns list based on enabled categories using flatMap
     const categoryMap = new Map<RegExp, string>();
-    const allPatterns = enabledCategories.flatMap(category => {
+    const allPatterns = enabledCategories.flatMap((category) => {
       if (!(category in UTILITY_CATEGORIES)) return [];
 
-      return UTILITY_CATEGORIES[category].patterns.map(pattern => {
+      return UTILITY_CATEGORIES[category].patterns.map((pattern) => {
         categoryMap.set(pattern, category);
         return pattern;
       });
@@ -208,22 +219,25 @@ const rule: Rule.RuleModule = {
       if (matched.length === 0) return;
 
       // Group matches by category using reduce
-      const matchesByCategory = matched.reduce<Record<string, string[]>>((acc, className) => {
-        const pattern = patterns.find(p => p.test(className));
-        const category = pattern && categoryMap.get(pattern);
+      const matchesByCategory = matched.reduce<Record<string, string[]>>(
+        (acc, className) => {
+          const pattern = patterns.find((p) => p.test(className));
+          const category = pattern && categoryMap.get(pattern);
 
-        if (category) {
-          (acc[category] ??= []).push(className);
-        }
+          if (category) {
+            (acc[category] ??= []).push(className);
+          }
 
-        return acc;
-      }, {});
+          return acc;
+        },
+        {},
+      );
 
       // Report each category separately
       Object.entries(matchesByCategory).forEach(([category, classes]) => {
         context.report({
           node,
-          messageId: 'noBootstrapUtilities',
+          messageId: "noBootstrapUtilities",
           data: {
             message: createMessage(classes, category),
           },
@@ -234,11 +248,7 @@ const rule: Rule.RuleModule = {
     return {
       // Handle JSX className attribute
       JSXAttribute(node: Node) {
-        if (
-          node.type === 'JSXAttribute' &&
-          node.name.type === 'JSXIdentifier' &&
-          (node.name.name === 'className' || node.name.name === 'class')
-        ) {
+        if (isClassNameAttribute(node)) {
           checkClassAttribute(node);
         }
       },

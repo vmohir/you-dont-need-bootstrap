@@ -105,6 +105,17 @@ export function getDataAttributeValue(node: Node): string | null {
 }
 
 /**
+ * Check if a node is a className or class attribute
+ */
+export function isClassNameAttribute(node: Node): boolean {
+  return (
+    node.type === 'JSXAttribute' &&
+    node.name.type === 'JSXIdentifier' &&
+    (node.name.name === 'className' || node.name.name === 'class')
+  );
+}
+
+/**
  * Factory function to create a Bootstrap detection rule
  */
 export function createBootstrapComponentRule(config: {
@@ -113,6 +124,10 @@ export function createBootstrapComponentRule(config: {
   url: string;
   dataAttributes?: string[];
 }): Rule.RuleModule {
+  const upperName = config.name.charAt(0).toUpperCase() + config.name.slice(1);
+  const messageIdClassName = `noBootstrap${upperName}`;
+  const messageIdDataAttribute = `noBootstrapData${upperName}`;
+
   return {
     meta: {
       type: 'suggestion',
@@ -123,8 +138,8 @@ export function createBootstrapComponentRule(config: {
         url: config.url,
       },
       messages: {
-        noBootstrap: 'Avoid Bootstrap {{name}} classes "{{classes}}"',
-        noBootstrapData: 'Avoid Bootstrap {{name}} data attribute "{{attribute}}"',
+        [messageIdClassName]: 'Avoid Bootstrap {{name}} classes "{{classes}}"',
+        [messageIdDataAttribute]: 'Avoid Bootstrap {{name}} data attribute "{{attribute}}"',
       },
     },
 
@@ -139,7 +154,7 @@ export function createBootstrapComponentRule(config: {
         if (matched.length > 0) {
           context.report({
             node,
-            messageId: `noBootstrap`,
+            messageId: messageIdClassName,
             data: {
               name: config.name,
               classes: matched.join(', '),
@@ -170,7 +185,7 @@ export function createBootstrapComponentRule(config: {
         ) {
           context.report({
             node,
-            messageId: `noBootstrapData`,
+            messageId: messageIdDataAttribute,
             data: {
               name: config.name,
               attribute: `${attrName}="${attrValue}"`,
@@ -182,14 +197,9 @@ export function createBootstrapComponentRule(config: {
       return {
         // Handle JSX className attribute
         JSXAttribute(node: Node) {
-          if (
-            node.type === 'JSXAttribute' &&
-            node.name.type === 'JSXIdentifier' &&
-            (node.name.name === 'className' || node.name.name === 'class')
-          ) {
+          if (isClassNameAttribute(node)) {
             checkClassAttribute(node);
           } else {
-            // Check data attributes
             checkDataAttribute(node);
           }
         },
